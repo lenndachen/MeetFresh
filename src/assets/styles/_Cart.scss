@@ -1,0 +1,19 @@
+.heading-wrapper{
+    display: flex;
+}
+
+.bar-wrapper{
+    display: flex;
+    align-content: stretch;
+    height: 100%;
+    padding: 20px;
+}
+
+.json-wrapper{
+    display: flex;
+    flex-direction: column wrap;
+}
+
+.website-link{
+    padding-left: 10%;
+}

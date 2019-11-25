@@ -1,0 +1,7 @@
+[
+    { "item": [1], "name": "Icy Taro", "price": 5.99, "link": "http://www.meetfresh.us/en/product/p0" },
+    { "item": [2],"name": "Sweet Taro", "price": 9.00, "link": "http://www.meetfresh.us/en/product/p1"},
+    { "item": [3],"name": "Spicy Boba", "price": 5.88, "link": "http://www.meetfresh.us/en/product/p2" },
+    { "item": [4],"name": "Bin Bop Bum", "price": 3.44, "link": "http://www.meetfresh.us/en/product/p3" },
+    { "item": [5],"name": "Healthy Bop", "price": 5.66, "link": "http://www.meetfresh.us/en/product/p4" }
+]
