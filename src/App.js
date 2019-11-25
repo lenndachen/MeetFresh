@@ -1,11 +1,11 @@
 import React from 'react';
-import Cart from './components/Cart'
+import Home from './containers/Home'
 
 
 function App() {
   return (
     <div className="App">
-        <Cart />
+        <Home />
     </div>
   );
 }

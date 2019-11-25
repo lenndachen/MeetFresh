@@ -1,26 +1,38 @@
 import React from "react";
-import items from "../items.json";
 import logo from "../../assets/images/logo.png";
 import bigpicture from "../../assets/images/big.jpg";
+import Item from "../../components/Item";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import items from "../../components/items.json";
 import "../../assets/styles/_Cart.scss";
+
 library.add(faShoppingCart);
 class Cart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cartTotal: 0,
+      cart: [],
+      item: []
+    };
+  }
   getCartItems() {}
 
-  // addition = e => {
-  //   e.preventDefault();
-  //   const total = this.items.price + 0;
-  //   if (total !== 0) {
-  //     const subtotal = total;
-  //     console.log
-
-  //     return this.subtotal;
-  //   }
-  // };
+  addition = item => {
+    console.log("item1", item);
+    let cart = this.state.cart;
+    const totalCost = item.price + this.state.cartTotal;
+    console.log("total", totalCost);
+    cart.push(item);
+    this.setState({
+      cart: cart,
+      cartTotal: totalCost
+    });
+  };
   render() {
+    console.log("this.state.cart", this.state.cart);
     return (
       <div>
         <div className="heading-wrapper">
@@ -46,8 +58,9 @@ class Cart extends React.Component {
             <div>
               <FontAwesomeIcon icon={faShoppingCart} />
             </div>
+            <div>{this.state.cart.length}</div>
             <div>
-              <i class="fas fa-shopping-cart"></i>{" "}
+              <i class="fas fa-shopping-cart"></i>
             </div>
           </div>
         </div>
@@ -58,18 +71,12 @@ class Cart extends React.Component {
             alt="woman with bowl of food"
           />
         </div>
-        <div className="json-wrapper">
-          {items.map((itemdetail, index) => {
-            return (
-              <div>
-                <h1>{itemdetail.name}</h1>
-                <h1>{itemdetail.price}</h1>
-                <p>
-                  <a href="mailto:">{itemdetail.link}</a>
-                </p>
-                <button onClick={e => this.addition(e)}>Add to Cart</button>
-              </div>
-            );
+        <div>
+          {items.map(item => {
+            return <Item
+              item={item}
+              addition={this.addition}
+              />;
           })}
         </div>
       </div>
