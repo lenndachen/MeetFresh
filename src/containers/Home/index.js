@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../assets/images/logo.png";
 import bigpicture from "../../assets/images/big.jpg";
 import Item from "../../components/Item";
+import CartPreview from "../../components/CartPreview";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -15,10 +16,10 @@ class Cart extends React.Component {
     this.state = {
       cartTotal: 0,
       cart: [],
-      item: []
+      item: [],
+      previewOpen: false,
     };
   }
-  getCartItems() {}
 
   addition = item => {
     console.log("item1", item);
@@ -31,12 +32,18 @@ class Cart extends React.Component {
       cartTotal: totalCost
     });
   };
+
+  displayCartItems = () => {
+    this.setState({
+      previewOpen: true,
+    })
+  }
   render() {
     console.log("this.state.cart", this.state.cart);
     return (
       <div>
         <div className="heading-wrapper">
-          <div>
+          <div className="logo">
             <img src={logo} alt="logo" />
           </div>
           <div className="bar-wrapper">
@@ -55,13 +62,16 @@ class Cart extends React.Component {
                 Order Here
               </a>
             </div>
-            <div>
-              <FontAwesomeIcon icon={faShoppingCart} />
-            </div>
-            <div>{this.state.cart.length}</div>
-            <div>
-              <i class="fas fa-shopping-cart"></i>
-            </div>
+            <div> {this.state.previewOpen &&
+              <CartPreview cart={this.state.cart}
+              totalCost={this.state.cartTotal}
+              />}
+              <button onClick={this.displayCartItems}>
+                <span className="clickableAwesomeFont">
+                  <FontAwesomeIcon icon={faShoppingCart} />
+                </span>
+                {this.state.cart.length}
+              </button></div>
           </div>
         </div>
         <div className="big-picture-wrapper">
@@ -73,10 +83,7 @@ class Cart extends React.Component {
         </div>
         <div>
           {items.map(item => {
-            return <Item
-              item={item}
-              addition={this.addition}
-              />;
+            return <Item item={item} addition={this.addition} />;
           })}
         </div>
       </div>
