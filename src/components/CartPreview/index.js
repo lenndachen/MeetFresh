@@ -3,15 +3,22 @@ import PreviewItem from "../PreviewItem"
 
 class CartPreview extends React.Component {
   render() {
-      return(
+    return (
+        <div>
           <div className="cart-preview-wrapper">
-              <div>Cart Preview</div>
+              <div className="cart-preview">Cart Preview</div>
               {this.props.cart.map((cartItem) => {
                 return <PreviewItem 
-                previewItem={cartItem}
+                  previewItem={cartItem}
               />
-          })}
-    </div>
+              })}
+          <div className="button-wrapper">
+            <button className="checkout-button">Checkout</button>
+          </div>
+        </div>
+        <div>
+        </div>
+        </div>
       )
   }
 }

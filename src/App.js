@@ -1,14 +1,15 @@
-import React from 'react';
-import Home from './containers/Home'
-
+import React from "react";
+import Home from "./containers/Home";
+import AppProvider from "./Context/index";
 
 function App() {
   return (
-    <div className="App">
+    <AppProvider>
+      <div className="App">
         <Home />
-    </div>
+      </div>
+    </AppProvider>
   );
 }
 
 export default App;
-
