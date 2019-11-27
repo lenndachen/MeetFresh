@@ -1,19 +1,36 @@
-.heading-wrapper{
-    display: flex;
+.heading-wrapper {
+  // display: flex;
 }
 
-.bar-wrapper{
-    display: flex;
-    align-content: stretch;
-    height: 100%;
-    padding: 20px;
+.logo{
+    // padding-right: 90%;
 }
 
-.json-wrapper{
-    display: flex;
-    flex-direction: column wrap;
+.bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+//   align-content:flex-end;
+  height: 100%;
+  padding: 20px;
+  right:05 em;
+//   justify-content: flex-end;
+
 }
 
-.website-link{
-    padding-left: 10%;
+.json-wrapper {
+  display: flex;
+  flex-direction: column wrap;
+}
+
+.website-link {
+  padding-left: 10%;
+}
+
+.big-picture{
+max-width: 100%;    
+}
+
+.clickableAwesomeFont{
+  cursor: pointer;
 }

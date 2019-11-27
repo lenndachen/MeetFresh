@@ -5,7 +5,7 @@ const Item = ({ item, addition }) => (
     <h1>{item.name}</h1>
     <h1>{item.price}</h1>
     <p>
-      <a href="mailto:">{item.link}</a>
+      <img src={item.link} alt="hello"></img>
     </p>
     <button onClick={() => addition(item)}>Add to Cart</button>
   </div>
