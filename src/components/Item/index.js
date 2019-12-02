@@ -1,7 +1,7 @@
 import React from "react";
 
 const Item = ({ item, addition }) => (
-  <div>
+  <div className="wrapper-for-food-items">
     <h1>{item.name}</h1>
     <h1>{item.price}</h1>
     <p>
