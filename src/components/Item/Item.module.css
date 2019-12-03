@@ -1,0 +1,36 @@
+.wrapper-for-food-item{   
+    border: 1px solid orange;
+    padding-left: 6%;
+    display: grid;
+    border-radius: 38px;
+    box-shadow: 
+        inset 16px 21px 52px -22px orange,
+        inset -12px -11px 8px -10px orange;
+    
+}
+
+.wrapper-for-food-item{
+	grid-column: span 2;
+}
+
+.wrapper-for-food-item:nth-last-child(1):nth-child(odd) {
+	grid-column: 2 / span 2;
+}
+
+
+
+.picture-wrapper{
+    width: 58%;
+}
+
+.button-wrapper{
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wrapping-button-wrapper{
+    padding-bottom: 8%;
+}

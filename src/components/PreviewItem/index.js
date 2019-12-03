@@ -1,9 +1,10 @@
 import React from "react";
+import styles from './PreviewItem.module.css';
 
 const PreviewItem = ({ previewItem }) => (
-  <div className="previewItem-wrapper">
-    <img className="mini-image" src={previewItem.link} alt="small view of photos of bought items"/>
-    <div className="food-wrapper">
+  <div className={styles["previewItem-wrapper"]}>
+    <img className={styles["mini-image"]} src={previewItem.link} alt="small view of photos of bought items"/>
+    <div className={styles["food-wrapper"]}>
       <div>{previewItem.name}</div>
       <div>{previewItem.price}</div>
     </div>

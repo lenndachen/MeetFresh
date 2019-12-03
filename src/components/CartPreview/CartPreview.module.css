@@ -1,12 +1,11 @@
 
 .cart-preview-wrapper{
-    border: solid 1px black;
+    border: solid 1px orange;
     padding: 50px;
     padding-right: 80px;
     position: absolute;
     background-color: white;
-    left: 70%;
-    bottom: 10%;
+    left: 34%;
 }
 
 .cart-preview{

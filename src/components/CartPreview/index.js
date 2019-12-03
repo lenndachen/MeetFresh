@@ -1,24 +1,22 @@
 import React from "react";
-import PreviewItem from "../PreviewItem"
+import PreviewItem from "../PreviewItem";
+import styles from './CartPreview.module.css';
 
 class CartPreview extends React.Component {
   render() {
     return (
-        <div>
-          <div className="cart-preview-wrapper">
-              <div className="cart-preview">Cart Preview</div>
+        <div className={styles['cart-preview-wrapper']}>
+              <div className={styles['cart-preview']}>Cart Preview</div>
               {this.props.cart.map((cartItem) => {
                 return <PreviewItem 
                   previewItem={cartItem}
               />
               })}
-          <div className="button-wrapper">
+          <div className={styles['button-wrapper']}>
             <button className="checkout-button">Checkout</button>
           </div>
         </div>
-        <div>
-        </div>
-        </div>
+
       )
   }
 }
