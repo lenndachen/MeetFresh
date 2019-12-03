@@ -1,0 +1,62 @@
+
+.heading-wrapper{
+  display: flex;
+  background-color: #FBDCCE;
+}
+body{
+  background-color: #FBDCCE;
+}
+.boom-logo{
+  padding-bottom: -20px;
+  border-radius: 10px;
+}
+
+.logo{
+  
+}
+
+.logo{
+   /* padding-right: 90%; */
+}
+
+.bar-wrapper {
+  height: 100%;
+  padding: 20px;
+  margin-left: 46%;
+  margin-bottom: 1%;
+}
+
+.json-wrapper {
+  display: flex;
+  flex-direction: column wrap;
+}
+
+.website-link {
+  padding-left: 20px;
+  right: 50%;
+}
+
+.big-picture{
+min-width: 100%;  
+z-index: 0;
+}
+
+.clickableAwesomeFont{
+  cursor: pointer;
+}
+
+.items-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 60px;
+  padding: 15%;
+  padding-top:2%;
+  padding-bottom: 2%;
+}
+
+.bar-wrapper-child-div{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import Home from "./containers/Home";
-import AppProvider from "./Context/index";
+import { CartProvider } from "./Context/CartContext.js";
 
 function App() {
   return (
-    <AppProvider>
+    <CartProvider>
       <div className="App">
         <Home />
       </div>
-    </AppProvider>
+    </CartProvider>
   );
 }
 
