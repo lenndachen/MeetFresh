@@ -23,7 +23,8 @@ body{
   height: 100%;
   padding: 20px;
   margin-left: 46%;
-  margin-bottom: 1%;
+  position: relative;
+  top: 63px;
 }
 
 .json-wrapper {
