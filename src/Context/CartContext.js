@@ -37,7 +37,6 @@ export class CartProvider extends React.Component {
 
   }
 
-
   render() {
       return (
           <CartContext.Provider value ={{

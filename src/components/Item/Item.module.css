@@ -10,17 +10,12 @@
 }
 
 .wrapper-for-food-item{
-	grid-column: span 2;
+    grid-column: span 2;
+    max-width: 338px;
 }
 
 .wrapper-for-food-item:nth-last-child(1):nth-child(odd) {
 	grid-column: 2 / span 2;
-}
-
-
-
-.picture-wrapper{
-    width: 58%;
 }
 
 .button-wrapper{
@@ -29,8 +24,13 @@
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
+    width: 90%;
 }
 
 .wrapping-button-wrapper{
     padding-bottom: 8%;
+}
+
+.picture-wrapper{
+    width: 94%;
 }

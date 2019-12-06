@@ -1,2 +1,5 @@
 export const HOME = '/';
-export const ABOUT  = '/about';
+export const CHECKOUT  = '/checkout';
+export const ABOUTUS = '/aboutus';
+export const CONTACTUS = "/contactus";
+export const ORDERHERE = "/orderhere";

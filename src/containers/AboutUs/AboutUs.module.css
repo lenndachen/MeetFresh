@@ -1,0 +1,16 @@
+.wraps-picture-and-words{
+    display: flex;
+    flex-direction: row;
+}
+
+h4{
+    font-size: 30px;
+}
+
+.About-Us-Picture{
+    width: 100%;
+}
+
+.div-wrapping-all-3-pics{
+    display: flex;
+}

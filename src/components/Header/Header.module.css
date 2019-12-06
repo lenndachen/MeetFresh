@@ -1,0 +1,44 @@
+.heading-wrapper {
+  display: flex;
+  background-color: #fbdcce;
+}
+body {
+  background-color: #fbdcce;
+}
+.boom-logo {
+  padding-bottom: -20px;
+  border-radius: 10px;
+}
+
+.bar-wrapper {
+  height: 100%;
+  padding: 20px;
+  margin-left: 46%;
+  position: relative;
+  top: 63px;
+}
+
+.json-wrapper {
+  display: flex;
+  flex-direction: column wrap;
+}
+
+.website-link {
+ padding: 10px;
+ color: white;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+.bar-wrapper-child-div {
+  display: flex;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-130%);
+}
+
+.cart-button{
+  position: relative;
+  bottom: -8px;
+}
