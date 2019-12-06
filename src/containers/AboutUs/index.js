@@ -33,9 +33,20 @@ class AboutUs extends React.Component {
           </div>
         </div>
         <div className={styles["div-wrapping-all-3-pics"]}>
-          <img src={th_01} alt="mound of beans"/>
-          <img src={th_02} alt="taro balls"/>
-          <img src={th_03} alt="rice"/>
+          <ul className={styles["div-wrapping-all-3-pics"]}>
+            <li>
+              <h2>Fresh</h2>
+              <img src={th_01} alt="mound of beans" />
+            </li>
+            <li>
+              <h2>Natural</h2>
+              <img src={th_02} alt="taro balls" />
+            </li>
+            <li>
+              <h2>Healthy</h2>
+              <img src={th_03} alt="rice" />
+            </li>
+          </ul>
         </div>
         <div>
           <Footer />
