@@ -6,6 +6,15 @@
     "link": "http://meetfresh.us/Uploads/1948fc16-9eb9-4372-88ea-8a82ac83790a.png"
   },
   {
+    "itemID": 2,
+    "name": "Sweet Taro",
+    "price": 9.0,
+    "link": "http://meetfresh.us/Uploads/90310fee-dee4-4202-b112-dc4d5b090572.png"
+  },
+  {
+    "itemID": 3,
+    "name": "Spicy Boba",
+    "price": 5.88,
     "link": "http://meetfresh.us/Uploads/aea34305-c8bd-4b5f-9720-8e2b7be69d3f.png"
   },
   {
