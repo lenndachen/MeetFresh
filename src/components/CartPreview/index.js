@@ -12,7 +12,6 @@ class CartPreview extends React.Component {
              return (
                <div className={styles["cart-preview-wrapper"]}>
                  <div className={styles["cart-preview"]}>Cart Preview</div>
-                 
                  {this.props.cart.map(cartItem => {
                    return <PreviewItem previewItem={cartItem} />;
                  })}
