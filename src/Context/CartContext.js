@@ -18,6 +18,12 @@ const Reducer = (state, action) => {
               ...state,
               cartTotal: state.cartTotal + action.payload
           };
+      case "ADD_QUANTITY":
+          console.log('quantity', action.payload, state.cart);
+          return {
+              ...state,
+               cart: state.cart.splice(action.payload.i, 1, action.payload.item)
+    }; 
 
       default:
           return state;
