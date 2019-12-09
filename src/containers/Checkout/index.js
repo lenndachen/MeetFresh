@@ -1,10 +1,8 @@
 import React from "react";
-import boom from "../../assets/images/boom.PNG";
-import styles from "../Home/Home.module.css";
 import { CartConsumer } from "../../Context/CartContext";
 import PreviewItem from "../../components/PreviewItem";
-import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 class Checkout extends React.Component {
   render() {
     return (
@@ -21,6 +19,9 @@ class Checkout extends React.Component {
                   return <PreviewItem previewItem={cartItem} />;
                 })}
               </ul>
+              <div>
+                <Footer />
+              </div>
             </div>
           );
         }}

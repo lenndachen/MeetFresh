@@ -1,7 +1,5 @@
 import React from "react";
 import bigpicture from "../../assets/images/big.jpg";
-import Item from "../../components/Item";
-import items from "../../components/items.json";
 import styles from "./Home.module.css";
 import { CartConsumer } from "../../Context/CartContext.js";
 import Header from "../../components/Header";

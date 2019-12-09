@@ -14,3 +14,7 @@ h4{
 .div-wrapping-all-3-pics{
     display: flex;
 }
+
+ul{
+    list-style: none;
+}

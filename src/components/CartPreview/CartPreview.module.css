@@ -16,4 +16,10 @@
 .button-wrapper{
     position: absolute;
     bottom: 0%;
+    display: flex;
+}
+
+.checkout-button{
+    margin: 10px;
+    float: left;
 }
