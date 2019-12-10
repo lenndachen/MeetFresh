@@ -9,26 +9,30 @@ import { CartConsumer } from "../../Context/CartContext";
 class OrderHere extends React.Component {
   addition = (dispatch, item, cart) => {
     console.log('current cart', cart);
-    if (cart.length === 0) {
+    const inCart = cart.some(cartItem => cartItem.itemID === item.itemID)
+    if (!inCart) {
       item.quantity = 1;
       dispatch({ type: "ADD_CART_ITEM", payload: item });
-      dispatch({ type: "ADD_COST", payload: item.price });
+      // dispatch({ type: "ADD_COST", payload: item.price });
     }
     else {
       cart.map((cartItem, i) => {
         console.log('cart item', cartItem)
          if (cartItem.itemID == item.itemID) {
-           console.log('duplicaate cart', i, cartItem)
-           item.quantity += 1;
+          //  console.log('duplicaate cart', i, cartItem)
+           item.quantity = item.quantity + 1;
            dispatch({ type: "ADD_QUANTITY", payload: {item, i } });
-           dispatch({ type: "ADD_COST", payload: item.price });
+          //  dispatch({ type: "ADD_COST", payload: item.price });
+          //  return 
          }
-         if (cartItem.itemID !== item.itemID) {
-          item.quantity = 1;
-          dispatch({ type: "ADD_CART_ITEM", payload: item });
-          dispatch({ type: "ADD_COST", payload: item.price });
-        }
-      })
+        //  return
+        //  else if (){
+        //   item.quantity = 1;
+        //   dispatch({ type: "ADD_CART_ITEM", payload: item });
+        //   dispatch({ type: "ADD_COST", payload: item.price });
+        //  }
+        })
+
     }
   };
 
