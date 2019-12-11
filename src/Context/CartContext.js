@@ -26,6 +26,21 @@ const Reducer = (state, action) => {
               ...state,
                cart: cart
     }; 
+    case "GET_TOTAL":
+        let total = 0;
+        let itemTotal = 0;
+        let itemNumbers = 0;
+        let cartTotal = state.cart 
+        cartTotal.map(item => {
+               itemTotal = item.quantity * item.price
+               total = total + itemTotal;
+               itemNumbers = itemNumbers + item.quantity
+            })
+            return {
+                ...state,
+                 cartTotal: total,
+                 cartItems: itemNumbers
+           }
 
       default:
           return state;
@@ -36,11 +51,24 @@ export class CartProvider extends React.Component {
   state = {
       cart: [],
       cartTotal: 0,
+      cartItems: 0,
       dispatch: action => {
           this.setState(state => Reducer(state, action));
       }
   };
 
+//   getTotal = () => {
+//     let total = 0;
+//     if (this.state) {
+//         let cart = this.state.cart
+//         let itemTotal = 0;
+//         cart.map(item => {
+//            itemTotal = item.quantity * item.price
+//            total = total + itemTotal;
+//         })
+//     } 
+//     return total;
+//   }
   async componentDidMount() {
 
   }

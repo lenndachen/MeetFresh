@@ -7,6 +7,7 @@ const PreviewItem = ({ previewItem }) => (
     <div className={styles["food-wrapper"]}>
       <div>{previewItem.name}</div>
       <div>{previewItem.price}</div>
+      <div>{previewItem.quantity}</div>
     </div>
   </div>
 );
