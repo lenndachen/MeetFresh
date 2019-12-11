@@ -1,5 +1,35 @@
 .form{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100%;
+    padding-right: 10%;
+}
+
+.inside-form{
+    justify-content: flex-end;
+}
+
+.words-inside-form{
+    align-items: center;
+    padding: 2.5%;
+    line-height: 4;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+input{
+    padding: 15px;
+    padding-left: 180px;
+}
+
+select{
+    padding: 15px;
+    padding-left: 240px;
+}
+
+.comments{
+    padding: 100px;
+    line-height: 200%;
 }

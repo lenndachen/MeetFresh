@@ -27,7 +27,7 @@ class Header extends React.Component {
     return (
       <CartConsumer>
         {props => {
-          console.log("hello", props);
+          console.log("   ", props);
           return (
             <div className={styles["heading-wrapper"]}>
               <div className={styles["logo"]}>
@@ -61,7 +61,7 @@ class Header extends React.Component {
                       <span className={styles["clickableAwesomeFont"]}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                       </span>
-                      {props.state.cart.length}
+                      {props.state.cartItems}
                     </button>
                   </div>
                 </div>
