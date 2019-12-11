@@ -7,9 +7,26 @@ import styles from "../Home/Home.module.css";
 import { CartConsumer } from "../../Context/CartContext";
 
 class OrderHere extends React.Component {
-  addition = (dispatch, item) => {
-    dispatch({ type: "ADD_CART_ITEM", payload: item });
-    dispatch({ type: "ADD_COST", payload: item.price });
+  addition = async (dispatch, item, cart) => {
+    console.log("current cart", cart);
+    const inCart = cart.some(cartItem => cartItem.itemID === item.itemID);
+    if (!inCart) {
+      item.quantity = 1;
+      dispatch({ type: "ADD_CART_ITEM", payload: item });
+      dispatch({ type: "GET_TOTAL" });
+    } else {
+      cart.map((cartItem, i) => {
+        console.log("cart item", cartItem);
+        if (cartItem.itemID == item.itemID) {
+          //  console.log('duplicaate cart', i, cartItem)
+          item.quantity = item.quantity + 1;
+          dispatch({ type: "ADD_QUANTITY", payload: { item, i } });
+          dispatch({ type: "GET_TOTAL" });
+          //  dispatch({ type: "ADD_COST", payload: item.price });
+          //  return
+        }
+      });
+    }
   };
 
   render() {
@@ -27,7 +44,13 @@ class OrderHere extends React.Component {
                   return (
                     <Item
                       item={item}
-                      addition={() => this.addition(props.state.dispatch, item)}
+                      addition={() =>
+                        this.addition(
+                          props.state.dispatch,
+                          item,
+                          props.state.cart
+                        )
+                      }
                     />
                   );
                 })}
