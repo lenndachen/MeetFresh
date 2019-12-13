@@ -1,6 +1,5 @@
 .wrapper-for-food-item{   
     border: 1px solid orange;
-    padding-left: 6%;
     display: grid;
     border-radius: 38px;
     box-shadow: 
@@ -20,7 +19,6 @@
 
 .button-wrapper{
     background-color: orange;
-    display: flex;
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
@@ -32,5 +30,6 @@
 }
 
 .picture-wrapper{
-    width: 94%;
+    width: 63%;
+
 }

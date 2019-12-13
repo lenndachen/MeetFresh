@@ -36,7 +36,6 @@ class Header extends React.Component {
                 </Link>
               </div>
               <div className={styles["bar-wrapper"]}>
-                <div className={styles["bar-wrapper-child-div"]}>
                   <div className={styles["website-link"]}>
                     <Link to="/contactus">Contact Us</Link>
                   </div>
@@ -46,7 +45,7 @@ class Header extends React.Component {
                   <div className={styles["website-link"]}>
                     <Link to="/orderhere">Order Here</Link>
                   </div>
-                  <div>
+                  <div className={styles["website-link"]}>
                     {" "}
                     {this.state.previewOpen && (
                       <CartPreview
@@ -61,10 +60,9 @@ class Header extends React.Component {
                       <span className={styles["clickableAwesomeFont"]}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                       </span>
-                      {props.state.cartItems}
+                      <div className={styles["cart-icon"]}>{props.state.cartItems}</div>
                     </button>
                   </div>
-                </div>
               </div>
             </div>
           );

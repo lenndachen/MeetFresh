@@ -6,11 +6,25 @@
 .previewItem-wrapper{
     display: flex;
     flex-direction: 'row';
+    background-color: white;
+
 }
 
-.food-wrapper{
-    position: absolute;
-    left: 70%;
-    align-content: center;
-    margin-top: 35px;
+.number-wrapper{
+    font-size: 40px;
+    font-weight: bolder;
+    position: relative;
+    left: -24px;
+    bottom: -30px;
+}
+
+.name-wrapper{
+    position: relative;
+    bottom: -30px;
+    right: -10;
+}
+.price-wrapper{
+    position: relative;
+    right: 0px;
+    bottom: -30px;
 }

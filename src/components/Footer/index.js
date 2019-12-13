@@ -16,13 +16,13 @@ class Footer extends React.Component {
         <p className={styles["created-date"]}>Created 2019 @LenndaChen</p>
         <div className={styles["font-awesome-icons-3"]}>
           <div>
-            <FontAwesomeIcon icon={faTwitterSquare} />
+            <FontAwesomeIcon icon={faTwitterSquare} size="2x" />
           </div>
           <div>
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faFacebook} size="2x" />
           </div>
           <div>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </div>
         </div>
       </div>

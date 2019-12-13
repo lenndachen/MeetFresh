@@ -1,44 +1,47 @@
 .heading-wrapper {
-  display: flex;
   background-color: #fbdcce;
+  height: 50;
+  border: 1px solid #fbdcce;
+  width: 100%;
+  position: relative;
+  padding-top: 10%;
 }
 body {
   background-color: #fbdcce;
+
 }
-.boom-logo {
-  padding-bottom: -20px;
-  border-radius: 10px;
+
+.logo {
+  position: absolute;
+  left: 0;
+  width: 25%;
+  top: -10px;
+  padding-top: 10px;
 }
 
 .bar-wrapper {
-  height: 100%;
-  padding: 20px;
-  margin-left: 46%;
-  position: relative;
-  top: 63px;
-}
-
-.json-wrapper {
-  display: flex;
-  flex-direction: column wrap;
+  position: absolute;
+  right: 0;
+  float: right;
+  top: 30px;
+  padding-right: 3%;
 }
 
 .website-link {
- padding: 10px;
- color: white;
+ padding: 5px;
+ color: black;
+ float: left;
+}
+
+.website-link:nth-of-type(4) {
+  margin-top: -5px;
 }
 
 a{
     color: black;
     text-decoration: none;
 }
-.bar-wrapper-child-div {
-  display: flex;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-130%);
-}
 
 .cart-button{
-  position: relative;
-  bottom: -8px;
+  margin-top: -0px;
 }
