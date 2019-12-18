@@ -5,17 +5,6 @@ import { Link } from "react-router-dom";
 import { CartConsumer } from "../../Context/CartContext";
 
 class CartPreview extends React.Component {
-  // getInfo() {
-  // const i = 0
-  //   { this.props.cart.map } {
-  //     if (cart[0] === itemID[i]) {
-  //       return 1, i++
-  //     }
-  //     if (cart[0] === itemID[i]) {
-  //       return 2, i++ 
-  //     }
-  //   }
-  // }
   render() {
        return (
          <CartConsumer>
@@ -32,7 +21,7 @@ class CartPreview extends React.Component {
                    <Link to="/checkout">
                      <button className={["checkout-button"]}>Checkout</button>
                    </Link>
-                   <div>
+                   <div className={styles["subtotal"]}>
                      SubTotal: {Number(props.state.cartTotal.toFixed(2))}
                    </div>
                  </div>

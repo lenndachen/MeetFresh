@@ -12,6 +12,9 @@
 .cart-preview{
     text-align: center;
     font-weight: bold;
+    position: relative;
+    top: -17px;
+    padding-left: 46px;
 }
 
 .button-wrapper{

@@ -18,11 +18,17 @@ class Header extends React.Component {
   }
 
   displayCartItems = () => {
-    this.setState({
-      previewOpen: true
-    });
-  };
-
+    if (this.state.previewOpen === false) {
+      this.setState({
+        previewOpen: true
+      });
+    }
+    else {
+      this.setState({
+        previewOpen: false
+      });
+    };
+  }
   render() {
     return (
       <CartConsumer>
