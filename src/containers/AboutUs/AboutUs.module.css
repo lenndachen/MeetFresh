@@ -1,7 +1,6 @@
 .wraps-picture-and-words{
     display: flex;
     flex-direction: row;
-    padding-top: 34px;
 }
 
 h4{
@@ -25,4 +24,20 @@ ul{
   width: 565px;
   max-width: 100%;
   height: auto;
+}
+
+.container-pic{
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block{
+  position: absolute;
+  top: 35%;
+  right: 40%;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
 }

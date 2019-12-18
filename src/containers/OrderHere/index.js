@@ -5,7 +5,6 @@ import Item from "../../components/Item";
 import items from "../../components/items.json";
 import styles from "../Home/Home.module.css";
 import { CartConsumer } from "../../Context/CartContext";
-
 class OrderHere extends React.Component {
   addition = async (dispatch, item, cart) => {
     console.log("current cart", cart);

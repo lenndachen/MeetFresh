@@ -11,7 +11,7 @@ class AboutUs extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className={styles["header"]}>
           <Header />
         </div>
         <div className={styles["wraps-picture-and-words"]}>
@@ -33,32 +33,24 @@ class AboutUs extends React.Component {
           </div>
         </div>
         <div className={styles["div-wrapping-all-3-pics"]}>
-          <ul className={styles["div-wrapping-all-3-pics"]}>
-            <li>
+          <div className={styles["container-pic"]}>
+            <div className={styles["text-block"]}>
               <h2>Fresh</h2>
-              <img
-                className={styles["pic1"]}
-                src={th_01}
-                alt="mound of beans"
-              />
-            </li>
-            <li>
+            </div>
+            <img className={styles["pic1"]} src={th_01} alt="mound of beans" />
+          </div>
+          <div className={styles["container-pic"]}>
+            <div className={styles["text-block"]}>
               <h2>Natural</h2>
-              <img
-                className={styles["pic1"]}
-                src={th_02}
-                alt="taro balls"
-              />
-            </li>
-            <li>
+            </div>
+            <img className={styles["pic1"]} src={th_02} alt="taro balls" />
+          </div>
+          <div className={styles["container-pic"]}>
+            <div className={styles["text-block"]}>
               <h2>Healthy</h2>
-              <img
-                className={styles["pic1"]}
-                src={th_03}
-                alt="rice"
-              />
-            </li>
-          </ul>
+            </div>
+            <img className={styles["pic1"]} src={th_03} alt="rice" />
+          </div>
         </div>
         <div>
           <Footer />
