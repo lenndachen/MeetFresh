@@ -1,7 +1,13 @@
-.food-and-more{
-    
-}
-
 .ul-links{
     background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.food-and-more{
+    padding-left: 0;
+}
+
+.toggle-button{
+    text-align: center;
 }

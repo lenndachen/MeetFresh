@@ -53,3 +53,27 @@
 #centered-toggle-button {
   position: absolute;
 }
+
+.form-in-checkout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal{
+  position: absolute;
+  top: 32%;
+  left: 25%;
+  width: 500px;
+}
+
+.content:nth-of-type(3){
+  width: 73%;
+}
+
+.content:nth-of-type(4){
+  width: 73%;
+}

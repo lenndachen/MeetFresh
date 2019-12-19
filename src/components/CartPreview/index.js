@@ -18,7 +18,7 @@ class CartPreview extends React.Component {
                  })}
                  <div className={styles["button-wrapper"]}>
                    
-                   <Link to="/checkout">
+                   <Link className={styles["checkout"]} to="/checkout">
                      <button className={["checkout-button"]}>Checkout</button>
                    </Link>
                    <div className={styles["subtotal"]}>
