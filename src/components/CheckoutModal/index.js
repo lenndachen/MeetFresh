@@ -2,23 +2,23 @@ import React from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
 import styles from "./CheckoutModal.module.css";
-import { browserHistory } from 'react-router';
+import { browserHistory } from "react-router";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-
+import creditcard from "../../assets/images/creditcard.jpg"
 export default class CheckoutModal extends React.Component {
   state = {
     first: " ",
     last: " ",
     email: " ",
-    cardInfo: " ",
+    cardInfo: " "
   };
   componentDidMount() {
-    const first = localStorage.getItem("First Name");
-    const last = localStorage.getItem("Last Name");
-    const email = localStorage.getItem("Email");
-    const cardInfo = localStorage.getItem("Card Number");
-    this.setState({ first, last, email, cardInfo });
+    // const first = localStorage.getItem("First Name");
+    // const last = localStorage.getItem("Last Name");
+    // const email = localStorage.getItem("Email");
+    // const cardInfo = localStorage.getItem("Card Number");
+    // this.setState({ first, last, email, cardInfo });
   }
 
   handleChange = event => {
@@ -36,67 +36,75 @@ export default class CheckoutModal extends React.Component {
     localStorage.setItem("Last Name", last);
     localStorage.setItem("Email", email);
     localStorage.setItem("Card Number", cardInfo);
-  };
-
-  handleOnSubmit = () => {
-    return (
-     browserHistory.push('/thankyou'));
+    browserHistory.push("/thankyou");
   };
 
   render() {
-    console.log("null", this.state.first)
+    console.log("null", this.state.first);
     if (!this.props.show) {
       return null;
     }
     return (
-      <form
-        className={styles["form-in-checkout"]}
-        onSubmit={this.handleFormSubmit}
-      >
-        <div className={styles["modal"]} id={styles["modal"]}>
+      <form className={styles["outer-modal"]}>
+        <div className={styles["inner-modal"]} id={styles["modal"]}>
           <h2> Checkout Page</h2>
-          <div className={styles["content"]}>
-            <input
-              className={styles["content"]}
-              type="text"
-              placeholder="First Name"
-              name="first"
-              value={this.state.first}
-              onChange={this.handleChange}
-            ></input>
-            <input
-              className={styles["content"]}
-              type="text"
-              placeholder="Last Name"
-              name="last"
-              value={this.state.last}
-              onChange={this.handleChange}
-            ></input>
-            <input
-              className={styles["content"]}
-              type="text"
-              placeholder="Email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            ></input>
-            <input
-              className={styles["content"]}
-              type="text"
-              placeholder="Card Number"
-              name="cardInfo"
-              value={this.state.cardInfo}
-              onChange={this.handleChange}
-            ></input>
+          <div className={styles["inside-modal-inputs"]}>
+            <div className={styles["names"]}>
+              <div>
+                <div className={styles["text"]}>First Name</div>
+                <input
+                  className={styles["content"]}
+                  type="text"
+                  name="first"
+                  value={this.state.first}
+                  onChange={this.handleChange}
+                ></input>
+              </div>
+              <div>
+                <div className={styles["text"]}>Last Name</div>
+                <input
+                  className={styles["content"]}
+                  type="text"
+                  name="last"
+                  value={this.state.last}
+                  onChange={this.handleChange}
+                ></input>
+              </div>
+            </div>
+            <div>
+              <div className={styles["text"]}>Email</div>
+              <input
+                className={styles["content2"]}
+                type="text"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              ></input>
+            </div>
+            <div className={styles["cardInfo"]}>
+              <div className={styles["credit-card-pics"]}>
+                <img src={creditcard} className={styles["credit-card-form"]} alt="credit card logo pics" height={50} />
+                </div>
+              <div className={styles["text"]}>Card Info.</div>
+              <input
+                className={styles["content1"]}
+                type="text"
+                name="cardInfo"
+                value={this.state.cardInfo}
+                onChange={this.handleChange}
+              ></input>
+            </div>
           </div>
           <div className={styles["actions"]}>
-            <Link to={ROUTES.THANKYOU}><button
-              type="button"
-              className={styles["toggle-button"]}
-              onClick={this.handleOnSubmit}
-            >
-              Submit
-            </button></Link>
+            <Link to={ROUTES.THANKYOU}>
+              <button
+                type="button"
+                className={styles["toggle-button"]}
+                onClick={this.handleFormSubmit}
+              >
+                Submit
+              </button>
+            </Link>
           </div>
         </div>
       </form>

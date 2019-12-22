@@ -3,7 +3,7 @@ import PreviewItem from "../PreviewItem";
 import styles from "./CartPreview.module.css";
 import { Link } from "react-router-dom";
 import { CartConsumer } from "../../Context/CartContext";
-
+import ButtonClick from "../ButtonClick/index";
 class CartPreview extends React.Component {
   render() {
        return (
@@ -14,7 +14,10 @@ class CartPreview extends React.Component {
                <div className={styles["cart-preview-wrapper"]}>
                  <div className={styles["cart-preview"]}>Cart Preview</div>
                  {this.props.cart.map(cartItem => {
-                   return <PreviewItem previewItem={cartItem} />;
+                   return (
+                     (<div><PreviewItem previewItem={cartItem} /><ButtonClick /></div>)
+                   );
+                     
                  })}
                  <div className={styles["button-wrapper"]}>
                    
