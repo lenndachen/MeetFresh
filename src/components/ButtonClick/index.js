@@ -18,18 +18,18 @@ class ButtonClick extends React.Component{
             number: 0,
         }
     }
-    PreviewQuantityEqualsClicks = () => {
+    PreviewQuantityEqualsClicks = (cartItem) => {
         this.setState = ({
             // eslint-disable-next-line no-undef
             clicks: <PreviewItem previewItem={cartItem} />
         })
     }
-    IncrementItem = (clicks) => {
+    IncrementItem = (cartItem) => {
         const number = <PreviewItem previewItem={cartItem} />
         this.setState({ number: cartItem + 1 });
     }
     
-    DecreaseItem = () => {
+    DecreaseItem = (cartItem) => {
         const number = <PreviewItem previewItem={cartItem} />
         this.setState({ number: cartItem - 1 });
     }

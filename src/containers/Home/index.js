@@ -26,7 +26,7 @@ class Home extends React.Component {
           return (
             <div>
               <div>
-                <Header />
+                <Header clear={true}/>
               </div>
               <div>
                 <div className={styles["picture-with-bowl"]}>
