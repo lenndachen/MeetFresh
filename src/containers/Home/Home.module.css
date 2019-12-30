@@ -6,6 +6,10 @@ body {
     flex: 1;
 }
 
+.clear-picture{
+  background: transparent;
+}
+
 .big-picture {
   height: auto;
   width: 100%;
