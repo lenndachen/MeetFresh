@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { CartConsumer } from "../../Context/CartContext";
-import boom from "../../assets/images/boom.PNG";
+import boom1 from "../../assets/images/boom1.png";
 import CartPreview from "../CartPreview";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -44,7 +44,7 @@ class Header extends React.Component {
             >
               <div className={styles["logo"]}>
                 <Link to="/">
-                  <img className={styles["boom-logo"]} src={boom} alt="logo" />
+                  <img className={styles["boom-logo"]} src={boom1} alt="logo" />
                 </Link>
               </div>
               <div className={styles["bar-wrapper"]}>

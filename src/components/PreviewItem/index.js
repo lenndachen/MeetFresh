@@ -9,31 +9,31 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faArrowAltCircleDown);
 
 class PreviewItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      newValue: this.props.previewItem.quantity,
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  // newValue: this.props.previewItem.quantity,
+  // };
+  // }
 
-  DecreaseItem = quantity => {
-    let decreaseQuantity = quantity - 1;
-    this.setState({
-      newValue: decreaseQuantity
-    });
-  };
+  // DecreaseItem = quantity => {
+  //   let decreaseQuantity = quantity - 1;
+  //   this.setState({
+  //     newValue: decreaseQuantity
+  //   });
+  // };
 
-  IncreaseItem = quantity => {
-    let increaseQuantity = quantity + 1;
-    this.setState({
-      newValue: increaseQuantity
-    });
-  };
+  // IncreaseItem = quantity => {
+  //   let increaseQuantity = quantity + 1;
+  //   this.setState({
+  //     newValue: increaseQuantity
+  //   });
+  // };
 
   render() {
     return (
       <div className={styles["previewItem-wrapper"]}>
-        <div className={styles["number-wrapper"]}>{this.state.newValue}x</div>
+        <div className={styles["number-wrapper"]}>{this.props.previewItem.quantity}x</div>
         <div className={styles["food-wrapper"]}>
           <div className={styles["name-wrapper"]}>
             {this.props.previewItem.name}
@@ -49,7 +49,7 @@ class PreviewItem extends React.Component {
             {this.props.previewItem.price}
           </div>
         </div>
-        <div>
+        {/* <div>
           <FontAwesomeIcon
             icon={faArrowAltCircleUp}
             onClick={() => this.IncreaseItem(this.props.previewItem.quantity)}
@@ -64,10 +64,11 @@ class PreviewItem extends React.Component {
             {" "}
             Down{" "}
           </FontAwesomeIcon>
-        </div>
+        </div> */}
       </div>
     );
-  }
+  };
 }
+  
 
 export default PreviewItem;

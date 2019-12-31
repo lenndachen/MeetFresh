@@ -10,7 +10,7 @@
 .heading-wrapper-clear{
    /* background-color: transparent; */
   height: 50;
-  border: 1px solid #fbdcce;
+  border: 1px solid transparent;
   width: 100%;
   position: absolute;
   padding-top: 10%;
@@ -26,6 +26,7 @@ body {
   width: 25%;
   top: -10px;
   padding-top: 10px;
+  
 }
 
 .bar-wrapper {
@@ -54,3 +55,4 @@ a{
 .cart-button{
   margin-top: -0px;
 }
+
