@@ -7,6 +7,7 @@ import Checkout from "./containers/Checkout";
 import AboutUs from "./containers/AboutUs";
 import OrderHere from "./containers/OrderHere";
 import ContactUs from "./containers/ContactUs";
+import ThankYou from "./containers/Thankyou";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path={ROUTES.ABOUTUS} component={AboutUs} />
           <Route exact path={ROUTES.CONTACTUS} component={ContactUs} />
           <Route exact path={ROUTES.ORDERHERE} component={OrderHere} />
+          <Route exact path={ROUTES.THANKYOU} component={ThankYou} />
         </Switch>
       </Router>
     </CartProvider>

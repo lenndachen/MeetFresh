@@ -1,7 +1,7 @@
 
 .cart-preview-wrapper{
     border: solid 1px orange;
-    padding: 50px;
+    padding: 34px;
     padding-right: 80px;
     position: absolute;
     background-color: white;
@@ -26,4 +26,8 @@
 .checkout-button{
     margin: 10px;
     float: left;
+}
+
+.checkout {
+    padding-right: 25px;
 }

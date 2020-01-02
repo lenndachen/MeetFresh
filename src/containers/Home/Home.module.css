@@ -16,8 +16,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 207%;
   height: 60em;
-  color: white;
-  font-size: 30 px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 150px;
+  line-height: 70px;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 .clickableAwesomeFont {

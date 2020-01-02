@@ -5,11 +5,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./Checkout.module.css";
 import CheckoutModal from "../../components/CheckoutModal/index";
+
 class Checkout extends React.Component {
   state = {
     show: false
   };
   showModal = e => {
+    console.log('hiiiiii')
     this.setState({
       show: !this.state.show
     });
@@ -31,23 +33,22 @@ class Checkout extends React.Component {
                     return <PreviewItem previewItem={cartItem} />;
                   })}
                 </ul>
+              </div>
                 <div>
-                  <div>
+          
                     <button
-                      class="toggle-button"
+                      className={styles["toggle-button"]}
                       id="centered-toggle-button"
                       onClick={e => {
                         this.showModal(e);
                       }}
                     >
-                      {" "}
-                      show Modal{" "}
+                      Payment
                     </button>
-                  </div>
+               
                   <CheckoutModal onClose={this.showModal} show={this.state.show}>
                   </CheckoutModal>
                 </div>
-              </div>
               <div>
                 <Footer />
               </div>
