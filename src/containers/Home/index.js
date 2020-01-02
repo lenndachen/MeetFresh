@@ -25,8 +25,8 @@ class Home extends React.Component {
           console.log(props);
           return (
             <div>
-              <div>
-                <Header />
+              <div className={styles["clear-picture"]}>
+                <Header className={styles["clear-picture"]} clear={true}/>
               </div>
               <div>
                 <div className={styles["picture-with-bowl"]}>

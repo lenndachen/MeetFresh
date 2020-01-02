@@ -3,7 +3,7 @@ import PreviewItem from "../PreviewItem";
 import styles from "./CartPreview.module.css";
 import { Link } from "react-router-dom";
 import { CartConsumer } from "../../Context/CartContext";
-
+import ButtonClick from "../ButtonClick/index";
 class CartPreview extends React.Component {
   render() {
        return (
@@ -14,11 +14,14 @@ class CartPreview extends React.Component {
                <div className={styles["cart-preview-wrapper"]}>
                  <div className={styles["cart-preview"]}>Cart Preview</div>
                  {this.props.cart.map(cartItem => {
-                   return <PreviewItem previewItem={cartItem} />;
+                   return (
+                     (<div><PreviewItem previewItem={cartItem} /></div>)
+                   );
+                     
                  })}
                  <div className={styles["button-wrapper"]}>
                    
-                   <Link to="/checkout">
+                   <Link className={styles["checkout"]} to="/checkout">
                      <button className={["checkout-button"]}>Checkout</button>
                    </Link>
                    <div className={styles["subtotal"]}>
