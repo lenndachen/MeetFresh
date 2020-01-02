@@ -5,7 +5,7 @@ import styles from "./CheckoutModal.module.css";
 import { browserHistory } from "react-router";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import creditcard from "../../assets/images/creditcard.jpg"
+import credit from "../../assets/images/credit.jpg";
 export default class CheckoutModal extends React.Component {
   state = {
     first: " ",
@@ -31,13 +31,29 @@ export default class CheckoutModal extends React.Component {
     this.props.onClose && this.props.onClose(e);
   };
   handleFormSubmit = () => {
-    const { first, last, email, cardInfo } = this.state;
+    console.log('payment')
+    const { first, last, email, creditcard } = this.state;
     localStorage.setItem("First Name", first);
     localStorage.setItem("Last Name", last);
     localStorage.setItem("Email", email);
-    localStorage.setItem("Card Number", cardInfo);
+    localStorage.setItem("Card Number", creditcard);
     browserHistory.push("/thankyou");
   };
+
+  // card number validation 
+  cardNumber = (handleFormSubmit) => {
+    var cardno = "/^(?:3[47][0-9]{13})$/";
+    var cardno1 = "/^(?:4[0-9]{12}(?:[0-9]{3})?)$/";
+    var cardno2 = "/^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/";
+    var cardno3 = "/^(?:5[1-5][0-9]{14})$/";
+    if (handleFormSubmit.value.match(cardno, cardno1, cardno2, cardno3)) {
+      return true;
+    } else {
+      alert("Not a valid credit card number!");
+      return false;
+    }
+
+  }
 
   render() {
     console.log("null", this.state.first);
@@ -83,16 +99,24 @@ export default class CheckoutModal extends React.Component {
             </div>
             <div className={styles["cardInfo"]}>
               <div className={styles["credit-card-pics"]}>
-                <img src={creditcard} className={styles["credit-card-form"]} alt="credit card logo pics" height={50} />
-                </div>
+                <img
+                  src={credit}
+                  className={styles["credit-card-form"]}
+                  alt="credit card logo pics"
+                  height={50}
+                />
+              </div>
               <div className={styles["text"]}>Card Info.</div>
               <input
                 className={styles["content1"]}
                 type="text"
-                name="cardInfo"
-                value={this.state.cardInfo}
-                onChange={this.handleChange}
-              ></input>
+                name="creditcard"
+                min={15}
+                max={16}
+                value={this.state.cardNumber}
+                onChange={this.handleFormSubmit}
+                // required
+              />
             </div>
           </div>
           <div className={styles["actions"]}>

@@ -26,6 +26,14 @@ const Reducer = (state, action) => {
         ...state,
         cart: cart
       };
+    case "DECREASE_QUANTITY":
+      let cart2 = state.cart;
+      cart2.splice(action.payload.i, 1, action.payload.item);
+      console.log("quantity", action.payload, state.cart);
+      return {
+        ...state,
+        cart: cart2
+      };
     case "GET_TOTAL":
       let total = 0;
       let itemTotal = 0;

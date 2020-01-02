@@ -11,6 +11,7 @@ class Checkout extends React.Component {
     show: false
   };
   showModal = e => {
+    console.log('hiiiiii')
     this.setState({
       show: !this.state.show
     });
@@ -34,7 +35,7 @@ class Checkout extends React.Component {
                 </ul>
               </div>
                 <div>
-                  <div>
+          
                     <button
                       className={styles["toggle-button"]}
                       id="centered-toggle-button"
@@ -42,10 +43,9 @@ class Checkout extends React.Component {
                         this.showModal(e);
                       }}
                     >
-                      {" "}
-                      Payment{" "}
+                      Payment
                     </button>
-                  </div>
+               
                   <CheckoutModal onClose={this.showModal} show={this.state.show}>
                   </CheckoutModal>
                 </div>
