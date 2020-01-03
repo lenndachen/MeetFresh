@@ -7,12 +7,17 @@ import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import credit from "../../assets/images/credit.jpg";
 export default class CheckoutModal extends React.Component {
-  state = {
-    first: " ",
-    last: " ",
-    email: " ",
-    cardInfo: " "
-  };
+  constructor(props) {
+    super(props)
+    this.creditCardValidator = this.creditCardValidator.bind(this);
+    this.state = {
+      first: " ",
+      last: " ",
+      email: " ",
+      creditcard: " "
+    };
+  }
+  
   componentDidMount() {
     // const first = localStorage.getItem("First Name");
     // const last = localStorage.getItem("Last Name");
@@ -21,11 +26,18 @@ export default class CheckoutModal extends React.Component {
     // this.setState({ first, last, email, cardInfo });
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     const inputValue = event.target.value;
     const inputName = event.target.name;
     // console.log("input", input)
-    this.setState({ [inputName]: inputValue });
+    this.setState({
+      [inputName]: inputValue,
+      // event.target.creditcard,
+    }, () => {
+        if (inputName === "creditcard") {
+         this.Havena(this.state.creditcard);
+        }
+    });
   };
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
@@ -41,18 +53,69 @@ export default class CheckoutModal extends React.Component {
   };
 
   // card number validation 
-  cardNumber = (handleFormSubmit) => {
-    var cardno = "/^(?:3[47][0-9]{13})$/";
-    var cardno1 = "/^(?:4[0-9]{12}(?:[0-9]{3})?)$/";
-    var cardno2 = "/^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/";
-    var cardno3 = "/^(?:5[1-5][0-9]{14})$/";
-    if (handleFormSubmit.value.match(cardno, cardno1, cardno2, cardno3)) {
-      return true;
-    } else {
-      alert("Not a valid credit card number!");
-      return false;
-    }
+  // cardNumber = (handleFormSubmit) => {
+  //   var cardno = "/^(?:3[47][0-9]{13})$/";
+  //   var cardno1 = "/^(?:4[0-9]{12}(?:[0-9]{3})?)$/";
+  //   var cardno2 = "/^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/";
+  //   var cardno3 = "/^(?:5[1-5][0-9]{14})$/";
+  //   if (handleFormSubmit.value.match(this.creditcard(cardno, cardno1, cardno2, cardno3))) {
+  //     return true;
+  //   } else {
+  //     alert("Not a valid credit card number!");
+  //     return false;
+  //   }
 
+  // }
+
+  Havena=()=>{
+  this.creditCardValidator.validate = (value, ccType) => {
+      value = String(value).replace(/[- ]/g, ' ');
+
+      var cardinfo = this.creditCardValidator.cards, results = [];
+      if (ccType) {
+        var expr = 'v' + cardinfo[ccType.toLowerCase()] + '$';
+        return expr ? !!value.match(expr) : false;
+      }
+
+      for (var p in cardinfo) {
+        if (value.match('^' + cardinfo[p] + '$')) {
+          results.push(p);
+        }
+      }
+      return results.length ? results.join('|') : false;
+    }
+  }
+  creditCardValidator() {
+    console.log("string")
+    this.creditCardValidator.cards = {
+      'mc': '5[1-5][0-9]{14}',
+      'ax': '3[47][0-9]{13}',
+      'dc': '6011[0-9]{12}',
+      'vi': '4(?:[0-9]{12} | [0-9] {15})',
+    }
+    this.creditCardValidator.validate = (value, ccType) => {
+      value = String(value).replace(/[- ]/g, ' ');
+
+      var cardinfo = this.creditCardValidator.cards, results = [];
+      if (ccType) {
+        var expr = 'v' + cardinfo[ccType.toLowerCase()] + '$';
+        return expr ? !!value.match(expr) : false;
+      }
+
+      for (var p in cardinfo) {
+        if (value.match('^' + cardinfo[p] + '$')) {
+          results.push(p);
+        }
+      }
+      return results.length ? results.join('|') : false;
+    }
+  }
+
+  formatCardNumber = (cardNumber) => { 
+    console.log(cardNumber);
+    let formattedCard = cardNumber
+    //split string where spaces are and then ultimately save that as formattedCard
+    return formattedCard;
   }
 
   render() {
@@ -84,6 +147,7 @@ export default class CheckoutModal extends React.Component {
                   name="last"
                   value={this.state.last}
                   onChange={this.handleChange}
+                  onInput={this.cardNumber}
                 ></input>
               </div>
             </div>
@@ -107,16 +171,19 @@ export default class CheckoutModal extends React.Component {
                 />
               </div>
               <div className={styles["text"]}>Card Info.</div>
-              <input
-                className={styles["content1"]}
-                type="text"
-                name="creditcard"
-                min={15}
-                max={16}
-                value={this.state.cardNumber}
-                onChange={this.handleFormSubmit}
+                <input
+                  className={styles["content1"]}
+                  type="text"
+                  name="creditcard"
+                  min={15}
+                  max={16}
+                  value={this.state.creditcard}
+                  onChange={this.handleChange} // took out because handleFormSubmit is inside cardNumber
+                  //included to see if onChange and onInput works at the same time, can two functions be put in onChange or can both be used in one < />
+                  //onInput={this.cardNumber}
                 // required
-              />
+              /> 
+              {this.formatCardNumber(this.state.creditcard)}
             </div>
           </div>
           <div className={styles["actions"]}>
