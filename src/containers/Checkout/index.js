@@ -41,7 +41,8 @@ class Checkout extends React.Component {
                       id="centered-toggle-button"
                       onClick={e => {
                         this.showModal(e);
-                      }}
+                  }}
+                  
                     >
                       Payment
                     </button>
