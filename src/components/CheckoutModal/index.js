@@ -111,6 +111,8 @@ export default class CheckoutModal extends React.Component {
     }
   }
 
+  
+
   formatCardNumber = (cardNumber) => { 
     console.log(cardNumber);
     let formattedCard = cardNumber
