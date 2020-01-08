@@ -6,18 +6,25 @@ import { browserHistory } from "react-router";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import credit from "../../assets/images/credit.jpg";
+import Cleave from "cleave.js/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faTimes);
 export default class CheckoutModal extends React.Component {
   constructor(props) {
-    super(props)
-    this.creditCardValidator = this.creditCardValidator.bind(this);
+    super(props);
+    // this.creditCardValidator = this.creditCardValidator.bind(this);
     this.state = {
       first: " ",
       last: " ",
       email: " ",
-      creditcard: " "
+      creditcard: " ",
+      loom: " "
     };
   }
-  
+
   componentDidMount() {
     // const first = localStorage.getItem("First Name");
     // const last = localStorage.getItem("Last Name");
@@ -26,24 +33,27 @@ export default class CheckoutModal extends React.Component {
     // this.setState({ first, last, email, cardInfo });
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     const inputValue = event.target.value;
     const inputName = event.target.name;
     // console.log("input", input)
-    this.setState({
-      [inputName]: inputValue,
-      // event.target.creditcard,
-    }, () => {
+    this.setState(
+      {
+        [inputName]: inputValue
+        // event.target.creditcard,
+      },
+      () => {
         if (inputName === "creditcard") {
-         this.Havena(this.state.creditcard);
+          this.formatCardNumber(this.state.creditcard);
         }
-    });
+      }
+    );
   };
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
   handleFormSubmit = () => {
-    console.log('payment')
+    console.log("payment");
     const { first, last, email, creditcard } = this.state;
     localStorage.setItem("First Name", first);
     localStorage.setItem("Last Name", last);
@@ -52,72 +62,44 @@ export default class CheckoutModal extends React.Component {
     browserHistory.push("/thankyou");
   };
 
-  // card number validation 
-  // cardNumber = (handleFormSubmit) => {
-  //   var cardno = "/^(?:3[47][0-9]{13})$/";
-  //   var cardno1 = "/^(?:4[0-9]{12}(?:[0-9]{3})?)$/";
-  //   var cardno2 = "/^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/";
-  //   var cardno3 = "/^(?:5[1-5][0-9]{14})$/";
-  //   if (handleFormSubmit.value.match(this.creditcard(cardno, cardno1, cardno2, cardno3))) {
-  //     return true;
-  //   } else {
-  //     alert("Not a valid credit card number!");
-  //     return false;
-  //   }
+  //split string where spaces are and then ultimately save that as formattedCard
+  formatCardNumber = cardNumber => {
+    console.log("loop", cardNumber);
+    let arr = cardNumber.split("");
+    console.log("arr.length", arr.length);
+    arr.splice(4, 0, " ");
+    // arr.splice(9, 0, " ");
+    // arr.splice(14, 0, " ");
+    const loom = arr.join("");
+    console.log(loom);
+    this.setState({
+      loom: loom.trim()
+    });
+  };
 
-  // }
+  onCreditCardChange = event => {
+    // formatted pretty value
+    console.log(event.target.value);
 
-  Havena=()=>{
-  this.creditCardValidator.validate = (value, ccType) => {
-      value = String(value).replace(/[- ]/g, ' ');
+    // raw value
+    console.log(event.target.rawValue);
+  };
 
-      var cardinfo = this.creditCardValidator.cards, results = [];
-      if (ccType) {
-        var expr = 'v' + cardinfo[ccType.toLowerCase()] + '$';
-        return expr ? !!value.match(expr) : false;
+  onCreditCardFocus = event => {
+    // update some state
+  };
+
+  formatCreditCard = () => {
+    new Cleave(".logo-form", {
+      creditCard: true,
+      onCreditCardTypeChanged: function(type) {
+        // update UI ...
       }
+    });
+  };
 
-      for (var p in cardinfo) {
-        if (value.match('^' + cardinfo[p] + '$')) {
-          results.push(p);
-        }
-      }
-      return results.length ? results.join('|') : false;
-    }
-  }
-  creditCardValidator() {
-    console.log("string")
-    this.creditCardValidator.cards = {
-      'mc': '5[1-5][0-9]{14}',
-      'ax': '3[47][0-9]{13}',
-      'dc': '6011[0-9]{12}',
-      'vi': '4(?:[0-9]{12} | [0-9] {15})',
-    }
-    this.creditCardValidator.validate = (value, ccType) => {
-      value = String(value).replace(/[- ]/g, ' ');
-
-      var cardinfo = this.creditCardValidator.cards, results = [];
-      if (ccType) {
-        var expr = 'v' + cardinfo[ccType.toLowerCase()] + '$';
-        return expr ? !!value.match(expr) : false;
-      }
-
-      for (var p in cardinfo) {
-        if (value.match('^' + cardinfo[p] + '$')) {
-          results.push(p);
-        }
-      }
-      return results.length ? results.join('|') : false;
-    }
-  }
-
-  
-
-  formatCardNumber = (cardNumber) => { 
-    console.log(cardNumber);
-    let formattedCard = cardNumber
-    //split string where spaces are and then ultimately save that as formattedCard
-    return formattedCard;
+  refreshPage() {
+    window.location.reload(false);
   }
 
   render() {
@@ -128,7 +110,10 @@ export default class CheckoutModal extends React.Component {
     return (
       <form className={styles["outer-modal"]}>
         <div className={styles["inner-modal"]} id={styles["modal"]}>
-          <h2> Checkout Page</h2>
+          <div className={styles["font-awesome-x-beside-checkout"]}>
+            <FontAwesomeIcon className={styles["fa-times"]} icon={faTimes} onClick={this.refreshPage}/>
+            <h2> Checkout Page</h2>
+          </div>
           <div className={styles["inside-modal-inputs"]}>
             <div className={styles["names"]}>
               <div>
@@ -149,7 +134,6 @@ export default class CheckoutModal extends React.Component {
                   name="last"
                   value={this.state.last}
                   onChange={this.handleChange}
-                  onInput={this.cardNumber}
                 ></input>
               </div>
             </div>
@@ -173,19 +157,33 @@ export default class CheckoutModal extends React.Component {
                 />
               </div>
               <div className={styles["text"]}>Card Info.</div>
+              <Cleave
+                className={styles["logo-form"]}
+                id={this.formatCreditCard}
+                placeholder="Enter credit card number"
+                options={{ creditCard: true }}
+                onFocus={this.onCreditCardFocus}
+                onChange={this.onCreditCardChange}
+              />
+              <div className={styles["cvv-placeholder"]}>
                 <input
-                  className={styles["content1"]}
-                  type="text"
-                  name="creditcard"
-                  min={15}
-                  max={16}
-                  value={this.state.creditcard}
-                  onChange={this.handleChange} // took out because handleFormSubmit is inside cardNumber
-                  //included to see if onChange and onInput works at the same time, can two functions be put in onChange or can both be used in one < />
-                  //onInput={this.cardNumber}
-                // required
-              /> 
-              {this.formatCardNumber(this.state.creditcard)}
+                  className={styles["cvv-placeholder"]}
+                  placeholder="CVV"
+                  type="cvv"
+                  required
+                  minLength="3"
+                  maxLength="3"
+                />
+                <input
+                  className={styles["cvv-placeholder"]}
+                  placeholder="Expire Date"
+                  type="cvv"
+                  required
+                  minLength="4"
+                  maxLength="4"
+                />
+                <div></div>
+              </div>
             </div>
           </div>
           <div className={styles["actions"]}>

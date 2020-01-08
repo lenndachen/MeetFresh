@@ -111,5 +111,26 @@
 .content2{
   width: 43%;
   margin-bottom: 10px;
+  text-align: center;
+}
 
+.fa-times{
+  float: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.logo-form{
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+}
+
+.content{
+  text-align: center;
+}
+
+.cvv-placeholder{
+  background-color: white;
+  text-align: center;
 }

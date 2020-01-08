@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./Checkout.module.css";
 import CheckoutModal from "../../components/CheckoutModal/index";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Checkout extends React.Component {
   state = {
@@ -42,7 +43,6 @@ class Checkout extends React.Component {
                       onClick={e => {
                         this.showModal(e);
                   }}
-                  
                     >
                       Payment
                     </button>
