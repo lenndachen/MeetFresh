@@ -31,6 +31,7 @@ export default class CheckoutModal extends React.Component {
     // const email = localStorage.getItem("Email");
     // const cardInfo = localStorage.getItem("Card Number");
     // this.setState({ first, last, email, cardInfo });
+    console.log('my props', this.props);
   }
 
   handleChange = event => {
@@ -49,6 +50,7 @@ export default class CheckoutModal extends React.Component {
       }
     );
   };
+
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
@@ -98,20 +100,22 @@ export default class CheckoutModal extends React.Component {
     });
   };
 
-  refreshPage() {
-    window.location.reload(false);
+  refreshPage =() => {
+    console.log("refresh page", this.props);
+    this.props.onClose()
   }
 
   render() {
     console.log("null", this.state.first);
-    if (!this.props.show) {
-      return null;
-    }
     return (
       <form className={styles["outer-modal"]}>
         <div className={styles["inner-modal"]} id={styles["modal"]}>
           <div className={styles["font-awesome-x-beside-checkout"]}>
-            <FontAwesomeIcon className={styles["fa-times"]} icon={faTimes} onClick={this.refreshPage}/>
+            <FontAwesomeIcon
+              className={styles["fa-times"]}
+              icon={faTimes}
+              onClick={this.refreshPage}
+            />
             <h2> Checkout Page</h2>
           </div>
           <div className={styles["inside-modal-inputs"]}>
@@ -203,7 +207,7 @@ export default class CheckoutModal extends React.Component {
   }
 }
 
-Modal.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  show: PropTypes.bool.isRequired
-};
+// Modal.propTypes = {
+//   onClose: PropTypes.func.isRequired,
+//   show: PropTypes.bool.isRequired
+// };

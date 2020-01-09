@@ -2,19 +2,27 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styles from "./ContactUs.module.css";
+import ContactUsForm from "../../components/ContactUsForm";
 class ContactUs extends React.Component {
-  foo() {
-    alert("Form has been submitted successfully");
-    return true;
+  constructor(props) {
+    super(props);
+  
+    this.state = { isOpen: false };
   }
 
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  
   render() {
     return (
       <div>
         <div>
           <Header />
         </div>
-        <form className={styles["form"]}>
+        <div>
           <div className={styles["words-inside-form"]}>
             We thank you and appreciate your visit to our website. Please send
             us your valuable comments if you have any recommendations for our
@@ -25,32 +33,16 @@ class ContactUs extends React.Component {
             future partner, please kindly fill in the『Application Form』 on our
             PARTNERS page.
           </div>
-          <div className={styles["inside-form"]}>
-            <select name="Subject">
-              <option value="Customer">Customer</option>
-              <option value="Cooperation">Cooperation</option>
-            </select>
-            <div>
-              <input type="text" placeholder="Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone" />
-            </div>
-            <div>
-              <input type="text" placeholder="Email" />
-            </div>
-            <div>
-              <input
-                className={styles["comments"]}
-                type="text"
-                placeholder="Comments"
-              />
-            </div>
-            <div>
-              <input type="submit" onclick={this.foo()} />
-            </div>
-          </div>
-        </form>
+        </div>
+        <div>
+          {this.state.isOpen &&
+          <ContactUsForm show={this.state.isOpen} onClose={this.toggleModal}
+
+        />}
+          <button type="button" onClick={e => { this.toggleModal(e); }}>
+            OPEN ME!
+          </button>
+        </div>
         <div>
           <Footer />
         </div>

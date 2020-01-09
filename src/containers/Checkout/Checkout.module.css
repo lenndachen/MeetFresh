@@ -1,16 +1,40 @@
 .ul-links{
     background-color: white;
     display: flex;
-    justify-content: center;
+    column-count: 1fr;
+    flex-direction: column;
+    align-items: center;
 }
 
 .food-and-more{
     padding-left: 0;
+    text-align: center;
+}
+
+.h4-cart{
+    position: relative;
+    left: 35px;
+    width: 400px;
+    height: 70px;
 }
 
 .toggle-button{
     text-align: center;
     width: 150px;
     height: 50px;
+}
+
+.form-payment{
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    left: -1%;
+}
+
+.maths{
+    position: relative;
+    left: 72%;
 }
 
