@@ -12,14 +12,13 @@ body {
 }
 
 .picture-with-bowl{
-  background: url(../../assets/images/mango.jpg) 100% 75%;
   background-repeat: no-repeat;
   background-size: 100% 207%;
-  height: 60em;
+  height: 25em;
   color: black;
   font-weight: bold;
   font-size: 20px;
-  padding: 150px;
+  padding-top: 150px;
   line-height: 70px;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
@@ -34,4 +33,61 @@ body {
   padding-bottom: 2%;
   align-content: center;
   
+}
+
+.clear-picture{
+
+}
+
+.column-wrapper-home{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  height: 250px;
+  margin-left: 50px;
+  margin-right: 50px;
+  grid-column-gap: 50px ;
+}
+
+.employee-wrapping{
+  background-color: white;
+}
+
+.whole-shabang{
+    background: url(../../assets/images/mangoRevised.jpg) 100% 75%;
+    height: 1250px;
+}
+
+.for-employees ul{
+  padding-left: 0;
+}
+ul{
+  padding-inline-start: 0px;
+}
+
+.food-img{
+      height: 213px;
+      width: 250px;
+}
+
+.homepage-column-with-img-and-ul{
+  display: flex;
+}
+
+.footer{
+  position: relative;
+  bottom: -174px;
+}
+
+h3{
+  font-size: 24px;
+}
+
+.employees-img{
+  width: 203px;
+}
+
+.input-3{
+  position: relative;
+  top: -10px;
 }

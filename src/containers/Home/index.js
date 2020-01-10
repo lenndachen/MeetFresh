@@ -3,6 +3,9 @@ import styles from "./Home.module.css";
 import { CartConsumer } from "../../Context/CartContext.js";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import employee from "../../assets/images/employee.jpg";
+import collage from "../../assets/images/collage.jpg";
+import work from "../../assets/images/workwithus.png";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +27,9 @@ class Home extends React.Component {
         {props => {
           console.log(props);
           return (
-            <div>
+            <div className={styles["whole-shabang"]}>
               <div className={styles["clear-picture"]}>
-                <Header className={styles["clear-picture"]} clear={true}/>
+                <Header className={styles["clear-picture"]} clear={true} />
               </div>
               <div>
                 <div className={styles["picture-with-bowl"]}>
@@ -44,7 +47,56 @@ class Home extends React.Component {
                   <br /> great satisfaction.
                 </div>
               </div>
-              <div>
+              <div className={styles["column-wrapper-home"]}>
+                <div className={styles["employee-wrapping"]}>
+                  <h3>For Employees</h3>
+                  <div>
+                    <img
+                      className={styles["employees-img"]}
+                      src={employee}
+                      alt="employees"
+                    ></img>
+                    <ul className={styles["for-employees"]}>
+                      <li>Resume</li>
+                      <li>Wage</li>
+                      <li>Papers</li>
+                      <li>Checks</li>
+                    </ul>
+                    <button>Input</button>
+                  </div>
+                </div>
+                <div className={styles["employee-wrapping"]}>
+                  <h3>Work with Us</h3>
+                  <div>
+                    <img src={work} alt="employees"></img>
+                    <ul className={styles["for-employees"]}>
+                      <li>Q and A</li>
+                      <li>Reviews</li>
+                      <li>About Us</li>
+                      <li>Franchisees</li>
+                    </ul>
+                    <button>Input</button>
+                  </div>
+                </div>
+                <div className={styles["employee-wrapping"]}>
+                  <h3>Creations</h3>
+                  <div>
+                    <img
+                      className={styles["food-img"]}
+                      src={collage}
+                      alt="employees"
+                    ></img>
+                    <ul className={styles["for-employees"]}>
+                      <li>Food</li>
+                      <li>Drinks</li>
+                      <li>Studies</li>
+                      <li>How we do it</li>
+                    </ul>
+                    <button className={styles["input-3"]}>Input</button>
+                  </div>
+                </div>
+              </div>
+              <div className={styles["footer"]}>
                 <Footer />
               </div>
             </div>
