@@ -1,5 +1,5 @@
 .heading-wrapper {
-  background-color: #fbdcce;
+  background-color: transparent;
   height: 50;
   border: 1px solid #fbdcce;
   width: 100%;
@@ -8,7 +8,7 @@
 
 }
 .heading-wrapper-clear{
-   /* background-color: transparent; */
+  background-color: transparent;
   height: 50;
   border: 1px solid transparent;
   width: 100%;
@@ -16,7 +16,7 @@
   padding-top: 10%;
 }
 body {
-  background-color: #fbdcce;
+  background-color: #FFFFFF;
 
 }
 

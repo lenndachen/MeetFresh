@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import employee from "../../assets/images/employee.jpg";
 import collage from "../../assets/images/collage.jpg";
 import work from "../../assets/images/workwithus.png";
+import dessert from "../../assets/images/dessert.jpg"
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +34,7 @@ class Home extends React.Component {
               </div>
               <div>
                 <div className={styles["picture-with-bowl"]}>
+                  <p className={styles["p-of-picture-with-bowl"]}>
                   Fresh Meet has been open since 1975. With over 40 years of
                   experience. We have served millions of people with <br />
                   our specially designed Taiwanese treats made be ourselves. The
@@ -45,7 +47,11 @@ class Home extends React.Component {
                   <br /> With so much dedication in our food process we proudly
                   provide our product with
                   <br /> great satisfaction.
+                  </p>
                 </div>
+                  {/* <div>
+                    <img className={styles["dessert-example"]} src={dessert} alt="dessert example"></img>
+                  </div> */}
               </div>
               <div className={styles["column-wrapper-home"]}>
                 <div className={styles["employee-wrapping"]}>

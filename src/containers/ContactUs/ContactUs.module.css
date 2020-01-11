@@ -32,3 +32,10 @@ select{
     padding: 100px;
     line-height: 200%;
 }
+
+.contactus-wrapper{
+    background-image: url(../../assets/images/taro-ball.jpg);
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+}

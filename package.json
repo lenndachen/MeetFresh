@@ -9,6 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@version/react-router-v3": "^1.0.0",
+    "cleave": "^1.0.0-alpha.10",
     "cleave.js": "^1.5.3",
     "font-awesome": "^4.7.0",
     "moment": "^2.24.0",

@@ -18,7 +18,7 @@ class ContactUs extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className={styles["contactus-wrapper"]}>
         <div>
           <Header />
         </div>
