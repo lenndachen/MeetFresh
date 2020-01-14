@@ -6,7 +6,8 @@ import banner_01 from "../../assets/images/banner_01.png";
 import th_01 from "../../assets/images/th_01.jpg";
 import th_02 from "../../assets/images/th_02.jpg";
 import th_03 from "../../assets/images/th_03.jpg";
-
+import vegan from "../../assets/images/vegan.jpg"
+import gluten from "../../assets/images/glutenfree.jpg"
 class AboutUs extends React.Component {
   render() {
     return (
@@ -15,13 +16,6 @@ class AboutUs extends React.Component {
           <Header />
         </div>
         <div className={styles["wraps-picture-and-words"]}>
-          <div className={styles["About-Us-picture-wrapper"]}>
-            <img
-              className={styles["About-Us-Picture"]}
-              src={banner_01}
-              alt="2 people making food"
-            />
-          </div>
           <div>
             <h4>AUTHENTIC TAIWANESE EXQUISITE DESSERTS</h4>
             Sister and Brother Fu grew up in a family which has been farming for
@@ -50,6 +44,18 @@ class AboutUs extends React.Component {
               <h2>Healthy</h2>
             </div>
             <img className={styles["pic1"]} src={th_03} alt="rice" />
+          </div>
+          <div className={styles["container-pic"]}>
+            <div className={styles["text-block"]}>
+              <h2>Gluten Free</h2>
+            </div>
+            <img className={styles["pic6"]} src={gluten} alt="rice" />
+          </div>
+          <div className={styles["container-pic"]}>
+            <div className={styles["text-block"]}>
+              <h2>Vegan</h2>
+            </div>
+            <img className={styles["pic7"]} src={vegan} alt="rice" />
           </div>
         </div>
         <div>

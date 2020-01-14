@@ -1,41 +1,50 @@
-.form{
-    height: 100%;
+.form {
+  height: 100%;
 }
 
-.inside-form{
-    justify-content: flex-end;
+.inside-form {
+  justify-content: flex-end;
 }
 
-.words-inside-form{
-    align-items: center;
-    padding: 2.5%;
-    line-height: 4;
-    border-top: 2px solid orange;
-    border-bottom: 2px solid orange;
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: 18px;
-    margin-bottom: 5%;
+.words-inside-form {
+  align-items: center;
+  padding: 2.5%;
+  line-height: 4;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 18px;
+  margin-bottom: 5%;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
 }
 
-input{
-    padding: 15px;
-    margin-top: 10px;
+input {
+  padding: 15px;
+  margin-top: 10px;
 }
 
-select{
-    padding: 15px;
-    padding-left: 240px;
+select {
+  padding: 15px;
+  padding-left: 240px;
 }
 
-.comments{
-    padding: 100px;
-    line-height: 200%;
+.comments {
+  padding: 100px;
+  line-height: 200%;
 }
 
-.contactus-wrapper{
-    background-image: url(../../assets/images/taro-ball.jpg);
-    background-size: cover;
-    height: 1000px;
-    position: relative;
+.contactus-wrapper {
+  background-image: url(../../assets/images/taro-ball.jpg);
+  background-size: cover;
+  height: 1200px;
+  position: relative;
+}
+
+.form-styles-wrapper{    
+  background-color: black;
+}
+
+.form-styles{    
+  background-color: black;
 }

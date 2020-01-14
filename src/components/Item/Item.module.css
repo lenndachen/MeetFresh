@@ -4,13 +4,15 @@
     border-radius: 38px;
     box-shadow: 
         inset 16px 21px 52px -22px orange,
-        inset -12px -11px 8px -10px orange;
+        inset -12px -11px 50px -10px orange;
     
 }
 
 .wrapper-for-food-item{
     grid-column: span 2;
     max-width: 338px;
+    margin: 1em;
+    background-color: white;
 }
 
 .wrapper-for-food-item:nth-last-child(1):nth-child(odd) {

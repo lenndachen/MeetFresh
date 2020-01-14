@@ -12,6 +12,13 @@ library.add(faTwitterSquare);
 class Footer extends React.Component {
   render() {
     return (
+       <div
+              className={
+                this.props.clear
+                  ? styles["footer-clear"]
+                  : styles["footer-wrapper"]
+              }
+            >
       <div className={styles["footer"]}>
         <p className={styles["created-date"]}>Created 2019 @LenndaChen</p>
         <div className={styles["font-awesome-icons-3"]}>
@@ -31,7 +38,8 @@ class Footer extends React.Component {
             </a>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
     );
   }
 }

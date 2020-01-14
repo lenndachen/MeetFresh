@@ -14,11 +14,10 @@ body {
 .picture-with-bowl{
   background-repeat: no-repeat;
   background-size: 100% 207%;
-  height: 25em;
+  height: 18em;
   color: white;
-  font-size: 13px;
+  font-size: 25px;
   padding-top: 150px;
-
 }
 
 .clickableAwesomeFont {
@@ -30,7 +29,11 @@ body {
   margin-left: 5%;
   padding-bottom: 2%;
   align-content: center;
-  
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1134px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .clear-picture{
@@ -95,5 +98,16 @@ h3{
   background-color: black;
   margin-left: 150px;
   margin-right: 150px;
+  padding-top: 30px;
   opacity: .7;
+  height: 200px;
+}
+
+.items-container:nth-child(4){
+  
+}
+
+.orderhere-wholeform{
+ background-image: url(../../assets/images/photo.jpeg);
+ opacity: .9;
 }
