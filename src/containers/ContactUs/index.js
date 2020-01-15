@@ -18,7 +18,7 @@ class ContactUs extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className={styles["contactus-wrapper"]}>
         <div>
           <Header />
         </div>
@@ -34,15 +34,25 @@ class ContactUs extends React.Component {
             PARTNERS page.
           </div>
         </div>
-        <div>
-          {this.state.isOpen &&
-          <ContactUsForm show={this.state.isOpen} onClose={this.toggleModal}
-
-        />}
-          <button type="button" onClick={e => { this.toggleModal(e); }}>
-            OPEN ME!
-          </button>
-        </div>
+       
+          <div>
+            {this.state.isOpen && (
+              <ContactUsForm
+                className={styles["form-styles"]}
+                show={this.state.isOpen}
+                onClose={this.toggleModal}
+              />
+            )}
+            <button
+              className={styles["background-button"]}
+              type="button"
+              onClick={e => {
+                this.toggleModal(e);
+              }}
+            >
+              OPEN ME!
+            </button>
+          </div>
         <div>
           <Footer />
         </div>

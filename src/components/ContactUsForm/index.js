@@ -20,6 +20,7 @@ export default class ContactUsForm extends React.Component {
             <option value="Customer">Customer</option>
             <option value="Cooperation">Cooperation</option>
           </select>
+          <div className={styles["style-inputs"]}>
           <div>
             <input type="text" placeholder="Name" />
           </div>
@@ -28,6 +29,7 @@ export default class ContactUsForm extends React.Component {
           </div>
           <div>
             <input type="text" placeholder="Email" />
+            </div>
           </div>
           <div>
             <input

@@ -14,13 +14,10 @@ body {
 .picture-with-bowl{
   background-repeat: no-repeat;
   background-size: 100% 207%;
-  height: 25em;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+  height: 18em;
+  color: white;
+  font-size: 25px;
   padding-top: 150px;
-  line-height: 70px;
-  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 .clickableAwesomeFont {
@@ -32,7 +29,11 @@ body {
   margin-left: 5%;
   padding-bottom: 2%;
   align-content: center;
-  
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1134px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .clear-picture{
@@ -56,6 +57,7 @@ body {
 .whole-shabang{
     background: url(../../assets/images/mangoRevised.jpg) 100% 75%;
     height: 1250px;
+
 }
 
 .for-employees ul{
@@ -90,4 +92,23 @@ h3{
 .input-3{
   position: relative;
   top: -10px;
+}
+
+.p-of-picture-with-bowl {
+  background-color: black;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding-top: 30px;
+  opacity: .7;
+  height: 200px;
+}
+
+.items-container:nth-child(4){
+  
+}
+
+.orderhere-wholeform{
+ background-image: url(../../assets/images/photo.jpeg);
+ opacity: .9;
+ height: 1300px;
 }

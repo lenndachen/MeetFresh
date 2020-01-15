@@ -35,7 +35,7 @@ class OrderHere extends React.Component {
         {props => {
           console.log(props);
           return (
-            <div>
+            <div className={styles["orderhere-wholeform"]}>
               <div>
                 <Header />
               </div>

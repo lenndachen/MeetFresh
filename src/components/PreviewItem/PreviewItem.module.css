@@ -6,7 +6,6 @@
 .previewItem-wrapper{
     display: flex;
     flex-direction: 'row';
-    background-color: white;
 }
 
 .number-wrapper{

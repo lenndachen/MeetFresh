@@ -66,11 +66,12 @@
 
 .inner-modal{
   position: absolute;
-  top:50%;
+  top:40%;
   left: 50%;
   width: 575px;
   transform: translate(-50%, -50%);
-  height: 43%;
+  height: 44%;
+
 }
 
 .content:nth-of-type(3){
@@ -133,4 +134,9 @@
 .cvv-placeholder{
   background-color: white;
   text-align: center;
+}
+
+.date-placeholder{
+  width: 156px;
+  height: 14.8px;
 }
