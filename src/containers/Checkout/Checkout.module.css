@@ -1,16 +1,20 @@
 .ul-links{
-    background-color: white;
+    background-color: transparent;
     display: flex;
     column-count: 1fr;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url(../../assets/images/photo2.jpg);
+    
+}
+.ul-links2{
+    background-color: white;
 }
 
 .food-and-more{
-    padding-left: 0;
     text-align: center;
+    padding-left: 102px;
+
 }
 
 .h4-cart{
@@ -29,10 +33,10 @@
 .form-payment{
     position: relative;
     display: flex;
-    width: 150px;
+    width: 0px;
     height: 150px;
     text-align: center;
-    left: -1%;
+    left: 16%;
 }
 
 .maths{
@@ -41,10 +45,19 @@
 }
 
 .checkout-container{
-    background-image: url(../../assets/images/photo2.jpg);
+    background-image: url(../../assets/images/image8.jpg);
     height: 1250px;
+    background-color: transparent;
 }
 
 body{
     height:1250px;
+}
+
+.line{
+    width: 230px
+}
+
+.line2{
+    width: 40px;
 }

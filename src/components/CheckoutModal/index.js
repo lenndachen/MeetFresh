@@ -10,7 +10,7 @@ import Cleave from "cleave.js/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
+import Moment from "react-moment";
 library.add(faTimes);
 export default class CheckoutModal extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class CheckoutModal extends React.Component {
     // const email = localStorage.getItem("Email");
     // const cardInfo = localStorage.getItem("Card Number");
     // this.setState({ first, last, email, cardInfo });
-    console.log('my props', this.props);
+    console.log("my props", this.props);
   }
 
   handleChange = event => {
@@ -100,10 +100,10 @@ export default class CheckoutModal extends React.Component {
     });
   };
 
-  refreshPage =() => {
+  refreshPage = () => {
     console.log("refresh page", this.props);
-    this.props.onClose()
-  }
+    this.props.onClose();
+  };
 
   render() {
     console.log("null", this.state.first);
@@ -179,14 +179,13 @@ export default class CheckoutModal extends React.Component {
                   maxLength="3"
                 />
                 <input
-                  className={styles["cvv-placeholder"]}
+                  className={styles["date-placeholder"]}
                   placeholder="Expire Date"
-                  type="cvv"
+                  type="month"
                   required
                   minLength="4"
                   maxLength="4"
-                />
-                <div></div>
+                />              
               </div>
             </div>
           </div>

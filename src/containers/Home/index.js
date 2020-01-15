@@ -7,6 +7,7 @@ import employee from "../../assets/images/employee.jpg";
 import collage from "../../assets/images/collage.jpg";
 import work from "../../assets/images/workwithus.png";
 import dessert from "../../assets/images/dessert.jpg"
+import { Link } from 'react-router-dom';
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -35,21 +36,21 @@ class Home extends React.Component {
               <div>
                 <div className={styles["picture-with-bowl"]}>
                   <p className={styles["p-of-picture-with-bowl"]}>
-                  Fresh Meet has been open since 1975. With over 40 years of
-                  experience. We have served millions of people with <br />
-                  our specially designed Taiwanese treats made be ourselves. The
-                  quality of our food is only the most natural and best quality
-                  of
-                  <br /> foods. Our desserts are made with love in our factory
-                  in Fuzhou, China and then shipped in trucks with high <br />
-                  standard refrigeration. Our food is then prepared by chefs
-                  with kitchen grade equipment.
-                  <br /> With so much dedication in our food process we proudly
-                  provide our product with
-                  <br /> great satisfaction.
+                    Fresh Meet has been open since 1975. With over 40 years of
+                    experience. We have served millions of people with <br />
+                    our specially designed Taiwanese treats made be ourselves.
+                    The quality of our food is only the most natural and best
+                    quality of
+                    <br /> foods. Our desserts are made with love in our factory
+                    in Fuzhou, China and then shipped in trucks with high <br />
+                    standard refrigeration. Our food is then prepared by chefs
+                    with kitchen grade equipment.
+                    <br /> With so much dedication in our food process we
+                    proudly provide our product with
+                    <br /> great satisfaction.
                   </p>
                 </div>
-                  {/* <div>
+                {/* <div>
                     <img className={styles["dessert-example"]} src={dessert} alt="dessert example"></img>
                   </div> */}
               </div>
@@ -63,12 +64,19 @@ class Home extends React.Component {
                       alt="employees"
                     ></img>
                     <ul className={styles["for-employees"]}>
-                      <li>Resume</li>
-                      <li>Wage</li>
-                      <li>Papers</li>
-                      <li>Checks</li>
+                      <Link to="/contactus">
+                        <li>Resume</li>{" "}
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Wage</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Papers</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Checks</li>
+                      </Link>
                     </ul>
-                    <button>Input</button>
                   </div>
                 </div>
                 <div className={styles["employee-wrapping"]}>
@@ -76,12 +84,19 @@ class Home extends React.Component {
                   <div>
                     <img src={work} alt="employees"></img>
                     <ul className={styles["for-employees"]}>
-                      <li>Q and A</li>
-                      <li>Reviews</li>
-                      <li>About Us</li>
-                      <li>Franchisees</li>
+                      <Link to="/contactus">
+                        <li>Q and A</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Reviews</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>About Us</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Franchisees</li>
+                      </Link>
                     </ul>
-                    <button>Input</button>
                   </div>
                 </div>
                 <div className={styles["employee-wrapping"]}>
@@ -93,12 +108,19 @@ class Home extends React.Component {
                       alt="employees"
                     ></img>
                     <ul className={styles["for-employees"]}>
-                      <li>Food</li>
-                      <li>Drinks</li>
-                      <li>Studies</li>
-                      <li>How we do it</li>
+                      <Link to="/contactus">
+                        <li>Food</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Drinks</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>Studies</li>
+                      </Link>
+                      <Link to="/contactus">
+                        <li>How we do it</li>
+                      </Link>
                     </ul>
-                    <button className={styles["input-3"]}>Input</button>
                   </div>
                 </div>
               </div>

@@ -42,28 +42,30 @@ class Checkout extends React.Component {
                 <Header />
               </div>
               <div className={styles["ul-links"]}>
-                <div className={styles["h4-cart"]}>
-                  <h4>Your Cart Items</h4>
-                </div>
-                <ul className={styles["food-and-more"]}>
-                  {props.state.cart.map(cartItem => {
-                    return <PreviewItem previewItem={cartItem} />;
-                  })}
-                </ul>
-                <div className={styles["form-payment"]}>
-                  <div>
-                    <div>Total</div>
-                    <div>Tax</div>
-                    <hr></hr>
-                    <div>Order Total</div>
+                <div className={styles["ul-links2"]}>
+                  <div className={styles["h4-cart"]}>
+                    <h4>Your Cart Items</h4>
                   </div>
-                  <div className={styles["maths"]}>
-                    <div>{Number(props.state.cartTotal.toFixed(2))}</div>
+                  <ul className={styles["food-and-more"]}>
+                    {props.state.cart.map(cartItem => {
+                      return <PreviewItem previewItem={cartItem} />;
+                    })}
+                  </ul>
+                  <div className={styles["form-payment"]}>
                     <div>
-                      {Number((props.state.cartTotal * 0.075).toFixed(2))}
+                      <div>Total</div>
+                      <div>Tax</div>
+                      <hr className={styles["line"]}></hr>
+                      <div>Order Total</div>
                     </div>
-                    <hr></hr>
-                    <div>{this.addingSum(props)}</div>
+                    <div className={styles["maths"]}>
+                      <div>{Number(props.state.cartTotal.toFixed(2))}</div>
+                      <div>
+                        {Number((props.state.cartTotal * 0.075).toFixed(2))}
+                      </div>
+                      <hr className={styles["line2"]}></hr>
+                      <div>{this.addingSum(props)}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -77,10 +79,7 @@ class Checkout extends React.Component {
                 >
                   Payment
                 </button>
-                {this.state.show &&
-                  <CheckoutModal
-                    onClose={this.showModal}
-                  /> }
+                {this.state.show && <CheckoutModal onClose={this.showModal} />}
               </div>
               <div>
                 <Footer />

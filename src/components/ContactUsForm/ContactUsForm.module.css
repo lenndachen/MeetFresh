@@ -12,3 +12,8 @@
     padding: 1em;
 
 }
+
+.style-inputs input{
+height: 22px;
+ width: 324px;
+}

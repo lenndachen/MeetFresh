@@ -8,6 +8,7 @@ import th_02 from "../../assets/images/th_02.jpg";
 import th_03 from "../../assets/images/th_03.jpg";
 import vegan from "../../assets/images/vegan.jpg"
 import gluten from "../../assets/images/glutenfree.jpg"
+import { Link } from "react-router-dom";
 class AboutUs extends React.Component {
   render() {
     return (
@@ -28,34 +29,34 @@ class AboutUs extends React.Component {
         </div>
         <div className={styles["div-wrapping-all-3-pics"]}>
           <div className={styles["container-pic"]}>
-            <div className={styles["text-block"]}>
+            <div className={styles["text-block2"]}>
               <h2>Fresh</h2>
             </div>
-            <img className={styles["pic1"]} src={th_01} alt="mound of beans" />
+            <Link to="/orderhere"><img className={styles["pic1"]} src={th_01} alt="mound of beans" /></Link>
           </div>
           <div className={styles["container-pic"]}>
-            <div className={styles["text-block"]}>
+            <div className={styles["text-block2"]}>
               <h2>Natural</h2>
             </div>
-            <img className={styles["pic1"]} src={th_02} alt="taro balls" />
+            <Link to="/orderhere"><img className={styles["pic1"]} src={th_02} alt="taro balls" /></Link>
           </div>
           <div className={styles["container-pic"]}>
-            <div className={styles["text-block"]}>
+            <div className={styles["text-block3"]}>
               <h2>Healthy</h2>
             </div>
-            <img className={styles["pic1"]} src={th_03} alt="rice" />
+            <Link to="/orderhere"><img className={styles["pic1"]} src={th_03} alt="rice" /></Link>
           </div>
           <div className={styles["container-pic"]}>
-            <div className={styles["text-block"]}>
+            <div className={styles["text-block4"]}>
               <h2>Gluten Free</h2>
             </div>
-            <img className={styles["pic6"]} src={gluten} alt="rice" />
+            <Link to="/orderhere"><img className={styles["pic1"]} src={gluten} alt="rice" /></Link>
           </div>
           <div className={styles["container-pic"]}>
-            <div className={styles["text-block"]}>
+            <div className={styles["text-block5"]}>
               <h2>Vegan</h2>
             </div>
-            <img className={styles["pic7"]} src={vegan} alt="rice" />
+             <Link to="/orderhere"><img className={styles["pic1"]} src={vegan} alt="rice" /></Link>
           </div>
         </div>
         <div>

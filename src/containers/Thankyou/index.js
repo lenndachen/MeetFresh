@@ -9,7 +9,6 @@ class Thankyou extends React.Component {
           purchases keep our business flourishing, thank you for your loyalty
           and dedication.
         </div>
-        <div>hi</div>
       </div>
     );
   }
