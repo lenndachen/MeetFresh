@@ -9,10 +9,14 @@ class CartPreview extends React.Component {
        return (
          <CartConsumer>
            {props => {
-             console.log("cart preview", props.state.cart);
+             console.log("cart preview", props.state);
              return (
                <div className={styles["cart-preview-wrapper"]}>
                  <div className={styles["cart-preview"]}>Cart Preview</div>
+                 {props.state.cart.length === 0 && 
+                 <div>Cart is Empty</div>
+              
+             }
                  {this.props.cart.map(cartItem => {
                    return (
                      (<div><PreviewItem previewItem={cartItem} /></div>)
@@ -22,7 +26,7 @@ class CartPreview extends React.Component {
                  <div className={styles["button-wrapper"]}>
                    
                    <Link className={styles["checkout"]} to="/checkout">
-                     <button className={["checkout-button"]}>Checkout</button>
+                     <button className={styles["checkout-button"]}>Checkout</button>
                    </Link>
                    <div className={styles["subtotal"]}>
                      SubTotal: {Number(props.state.cartTotal.toFixed(2))}

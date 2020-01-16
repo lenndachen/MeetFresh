@@ -25,10 +25,15 @@
 }
 
 .checkout-button{
-    margin: 10px;
-    float: left;
+    background: orange;
+    border-radius: 10px;
+    border: orange;
+    padding: 4px;
+
 }
+
 
 .checkout {
     padding-right: 25px;
 }
+

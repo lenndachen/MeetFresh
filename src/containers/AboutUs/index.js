@@ -59,7 +59,7 @@ class AboutUs extends React.Component {
              <Link to="/orderhere"><img className={styles["pic1"]} src={vegan} alt="rice" /></Link>
           </div>
         </div>
-        <div>
+        <div className={styles["boomy"]}>
           <Footer />
         </div>
       </div>
