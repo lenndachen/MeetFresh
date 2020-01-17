@@ -3,7 +3,7 @@ import { CartConsumer } from "../../Context/CartContext";
 import PreviewItem from "../../components/PreviewItem";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import styles from "./Checkout.module.css";
+import styles from "./Checkout.module.scss";
 import CheckoutModal from "../../components/CheckoutModal/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

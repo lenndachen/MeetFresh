@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import styles from "../../components/ContactUsForm/ContactUsForm.module.css";
+import styles from "../../components/ContactUsForm/ContactUsForm.module.scss";
 
 export default class ContactUsForm extends React.Component {
 

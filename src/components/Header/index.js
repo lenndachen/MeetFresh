@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import { CartConsumer } from "../../Context/CartContext";
 import boom1 from "../../assets/images/boom1.png";
 import CartPreview from "../CartPreview";

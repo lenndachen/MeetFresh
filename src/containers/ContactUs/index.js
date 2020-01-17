@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import styles from "./ContactUs.module.css";
+import styles from "./ContactUs.module.scss";
 import ContactUsForm from "../../components/ContactUsForm";
 class ContactUs extends React.Component {
   constructor(props) {

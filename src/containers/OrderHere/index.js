@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Item from "../../components/Item";
 import items from "../../components/items.json";
-import styles from "../Home/Home.module.css";
+import styles from "../Home/Home.module.scss";
 import { CartConsumer } from "../../Context/CartContext";
 class OrderHere extends React.Component {
   

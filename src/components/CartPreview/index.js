@@ -1,9 +1,8 @@
 import React from "react";
 import PreviewItem from "../PreviewItem";
-import styles from "./CartPreview.module.css";
+import styles from "./CartPreview.module.scss";
 import { Link } from "react-router-dom";
 import { CartConsumer } from "../../Context/CartContext";
-import ButtonClick from "../ButtonClick/index";
 class CartPreview extends React.Component {
   render() {
        return (

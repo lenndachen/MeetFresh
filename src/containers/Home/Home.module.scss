@@ -36,19 +36,6 @@ body {
   justify-content: center;
 }
 
-.clear-picture{
-
-}
-
-.column-wrapper-home{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  position: relative;
-  height: 250px;
-  margin-left: 50px;
-  margin-right: 50px;
-  grid-column-gap: 50px ;
-}
 
 .employee-wrapping{
   background-color: white;
@@ -56,7 +43,7 @@ body {
 
 .whole-shabang{
     background: url(../../assets/images/mangoRevised.jpg) 100% 75%;
-    height: 1250px;
+    height: 2000px;
 
 }
 
@@ -76,11 +63,6 @@ ul{
   display: flex;
 }
 
-.footer{
-  position: relative;
-  bottom: -174px;
-}
-
 h3{
   font-size: 24px;
 }
@@ -96,11 +78,10 @@ h3{
 
 .p-of-picture-with-bowl {
   background-color: black;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding-top: 30px;
   opacity: .7;
-  height: 200px;
+  min-height: 200px;
+  width: 80%;
+  margin: auto;
 }
 
 .items-container:nth-child(4){
@@ -112,3 +93,23 @@ h3{
  opacity: .9;
  height: 1300px;
 }
+
+
+.column-wrapper-home{
+    display: grid;
+    height: 250px;
+    position: relative;
+    grid-row-gap: 17px;
+    margin-left: 2%;
+    margin-right: 2%;
+    grid-column-gap: 50px ;
+  @media screen and (min-width: 1224px){
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (max-width: 320px){
+  grid-template-columns: 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+}
+

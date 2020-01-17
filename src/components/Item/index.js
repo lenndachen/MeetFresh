@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Item.module.css";
+import styles from "./Item.module.scss";
 
 const Item = ({ item, addition }) => (
   <div className={styles["wrapper-for-food-item"]}>

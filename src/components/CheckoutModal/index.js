@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
-import styles from "./CheckoutModal.module.css";
+import styles from "./CheckoutModal.module.scss";
 import { browserHistory } from "react-router";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";

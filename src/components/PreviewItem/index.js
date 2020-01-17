@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./PreviewItem.module.css";
+import styles from "./PreviewItem.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowAltCircleDown,

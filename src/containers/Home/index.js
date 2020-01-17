@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import { CartConsumer } from "../../Context/CartContext.js";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
