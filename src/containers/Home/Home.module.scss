@@ -1,9 +1,12 @@
+
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     text-align: center; 
     flex: 1;
+    background-size: cover;
 }
 
 .big-picture {
@@ -42,9 +45,7 @@ body {
 }
 
 .whole-shabang{
-    background: url(../../assets/images/mangoRevised.jpg) 100% 75%;
-    height: 2000px;
-
+  background: url(../../assets/images/mangoRevised.jpg) 100% 75%;
 }
 
 .for-employees ul{
@@ -91,17 +92,15 @@ h3{
 .orderhere-wholeform{
  background-image: url(../../assets/images/photo.jpeg);
  opacity: .9;
- height: 1300px;
 }
 
 
 .column-wrapper-home{
     display: grid;
-    height: 250px;
     position: relative;
     grid-row-gap: 17px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     grid-column-gap: 50px ;
   @media screen and (min-width: 1224px){
   grid-template-columns: 1fr 1fr 1fr;
@@ -112,4 +111,3 @@ h3{
   margin-right: 10%;
   }
 }
-

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 class AboutUs extends React.Component {
   render() {
     return (
-      <div>
+      <div className={styles["all-of-it"]}>
         <div className={styles["header"]}>
           <Header />
         </div>
@@ -48,7 +48,7 @@ class AboutUs extends React.Component {
           </div>
           <div className={styles["container-pic"]}>
             <div className={styles["text-block4"]}>
-              <h2>Gluten Free</h2>
+              <h2>No Gluten</h2>
             </div>
             <Link to="/orderhere"><img className={styles["pic1"]} src={gluten} alt="rice" /></Link>
           </div>

@@ -124,9 +124,8 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className={styles["footer"]}>
+        
                 <Footer />
-              </div>
             </div>
           );
         }}
